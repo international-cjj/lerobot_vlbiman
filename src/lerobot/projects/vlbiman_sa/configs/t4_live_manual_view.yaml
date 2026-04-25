@@ -1,0 +1,6 @@
+# Edit this phrase while the viewer is running.
+# The script reloads this file automatically and applies the new phrase.
+target_phrase: pink cup
+
+# Optional window title for the OpenCV viewer.
+window_name: T4 Live Manual View

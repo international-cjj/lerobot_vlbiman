@@ -1,0 +1,24 @@
+[project]
+name = "lerobot_robot_cjjarm"
+version = "0.1.0"
+description = "Custom LeRobot driver for CJJ Arm"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lerobot",
+    "pyserial",
+    "numpy"
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# 这一段非常重要，它告诉打包工具去哪里找源码
+[tool.setuptools.packages.find]
+where = ["."]  # 在当前目录下查找
+include = ["lerobot_robot_cjjarm*"]  # 包含的包名
+namespaces = false

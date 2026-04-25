@@ -1,0 +1,3875 @@
+{
+  "inventory": {
+    "urdf": [
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.urdf",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.urdf"
+    ],
+    "xacro": [],
+    "xml": [],
+    "mjcf": [
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.mjcf",
+      "outputs/vlbiman_sa/mujoco_dual_camera_scene/check_scene/scene/dual_camera_target_scene.mjcf",
+      "outputs/vlbiman_sa/mujoco_dual_camera_scene/smoke_dual_camera_scene/scene/dual_camera_target_scene.mjcf",
+      "outputs/vlbiman_sa/mujoco_dual_camera_scene/viewer_latest/scene/dual_camera_target_scene.mjcf",
+      "outputs/vlbiman_sa/mujoco_dual_camera_scene/viewer_scene_smoke/scene/dual_camera_target_scene.mjcf",
+      "outputs/vlbiman_sa/mujoco_dual_camera_scene/viewer_scene_smoke_fix/scene/dual_camera_target_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T115405Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T115428Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T115456Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T120844Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T121121Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T121142Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T121250Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T122521Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T122546Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T122659Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T122748Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf",
+      "outputs/vlbiman_sa/visual_pickorange_true_closed_loop/pickorange_true_closed_loop_20260422T122853Z/analysis/scene/pickorange_true_closed_loop_scene.mjcf"
+    ],
+    "mesh": [
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/base_link.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/finger_left.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/finger_right.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/link1-2.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/link2-3.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/link3-4.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/link4-5.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/link5-6.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/link6-7.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/base_link.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_left.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_right.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link1-2.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link2-3.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link3-4.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link4-5.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link5-6.stl",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link6-7.stl"
+    ],
+    "sim_python": [
+      "benchmarks/video/benchmark.py",
+      "benchmarks/video/capture_camera_feed.py",
+      "benchmarks/video/run_video_benchmark.py",
+      "examples/backward_compatibility/replay.py",
+      "examples/dataset/load_lerobot_dataset.py",
+      "examples/dataset/use_dataset_image_transforms.py",
+      "examples/dataset/use_dataset_tools.py",
+      "examples/lekiwi/evaluate.py",
+      "examples/lekiwi/record.py",
+      "examples/lekiwi/replay.py",
+      "examples/lekiwi/teleoperate.py",
+      "examples/phone_to_so100/evaluate.py",
+      "examples/phone_to_so100/record.py",
+      "examples/phone_to_so100/replay.py",
+      "examples/phone_to_so100/teleoperate.py",
+      "examples/port_datasets/display_error_files.py",
+      "examples/port_datasets/port_droid.py",
+      "examples/port_datasets/slurm_aggregate_shards.py",
+      "examples/port_datasets/slurm_port_shards.py",
+      "examples/port_datasets/slurm_upload.py",
+      "examples/so100_to_so100_EE/evaluate.py",
+      "examples/so100_to_so100_EE/record.py",
+      "examples/so100_to_so100_EE/replay.py",
+      "examples/so100_to_so100_EE/teleoperate.py",
+      "examples/training/train_policy.py",
+      "examples/training/train_with_streaming.py",
+      "examples/tutorial/act/act_training_example.py",
+      "examples/tutorial/act/act_using_example.py",
+      "examples/tutorial/async-inf/policy_server.py",
+      "examples/tutorial/async-inf/robot_client.py",
+      "examples/tutorial/diffusion/diffusion_training_example.py",
+      "examples/tutorial/diffusion/diffusion_using_example.py",
+      "examples/tutorial/pi0/using_pi0_example.py",
+      "examples/tutorial/rl/hilserl_example.py",
+      "examples/tutorial/rl/reward_classifier_example.py",
+      "examples/tutorial/smolvla/using_smolvla_example.py",
+      "lerobot_camera_gemini335l/__init__.py",
+      "lerobot_camera_gemini335l/config_gemini335l.py",
+      "lerobot_camera_gemini335l/depth_viewer.py",
+      "lerobot_camera_gemini335l/diagnose_depth_startup.py",
+      "lerobot_camera_gemini335l/diagnostics.py",
+      "lerobot_camera_gemini335l/gemini335l.py",
+      "lerobot_camera_gemini335l/list_profiles.py",
+      "lerobot_camera_gemini335l/runtime_env.py",
+      "lerobot_camera_gemini335l/smoke_test.py",
+      "lerobot_camera_gemini335l/stream_viewer.py",
+      "lerobot_robot_cjjarm/__init__.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/DM_CAN.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/__init__.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_robot.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_sim.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/config_cjjarm.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/config_cjjarm_sim.py",
+      "lerobot_robot_cjjarm/lerobot_robot_cjjarm/kinematics.py",
+      "lerobot_teleoperator_zhonglin/__init__.py",
+      "lerobot_teleoperator_zhonglin/lerobot_teleoperator_zhonglin/__init__.py",
+      "lerobot_teleoperator_zhonglin/lerobot_teleoperator_zhonglin/config_zhonglin.py",
+      "lerobot_teleoperator_zhonglin/lerobot_teleoperator_zhonglin/zhonglin_teleop.py",
+      "scripts/convert_joints_to_pose.py",
+      "scripts/teleop_cjjarm_keyboard.py",
+      "scripts/teleop_cjjarm_zhonglin.py",
+      "src/lerobot/__init__.py",
+      "src/lerobot/__version__.py",
+      "src/lerobot/async_inference/configs.py",
+      "src/lerobot/async_inference/constants.py",
+      "src/lerobot/async_inference/helpers.py",
+      "src/lerobot/async_inference/policy_server.py",
+      "src/lerobot/async_inference/robot_client.py",
+      "src/lerobot/cameras/__init__.py",
+      "src/lerobot/cameras/camera.py",
+      "src/lerobot/cameras/configs.py",
+      "src/lerobot/cameras/opencv/__init__.py",
+      "src/lerobot/cameras/opencv/camera_opencv.py",
+      "src/lerobot/cameras/opencv/configuration_opencv.py",
+      "src/lerobot/cameras/reachy2_camera/__init__.py",
+      "src/lerobot/cameras/reachy2_camera/configuration_reachy2_camera.py",
+      "src/lerobot/cameras/reachy2_camera/reachy2_camera.py",
+      "src/lerobot/cameras/realsense/__init__.py",
+      "src/lerobot/cameras/realsense/camera_realsense.py",
+      "src/lerobot/cameras/realsense/configuration_realsense.py",
+      "src/lerobot/cameras/utils.py",
+      "src/lerobot/configs/default.py",
+      "src/lerobot/configs/eval.py",
+      "src/lerobot/configs/parser.py",
+      "src/lerobot/configs/policies.py",
+      "src/lerobot/configs/train.py",
+      "src/lerobot/configs/types.py",
+      "src/lerobot/datasets/aggregate.py",
+      "src/lerobot/datasets/backward_compatibility.py",
+      "src/lerobot/datasets/compute_stats.py",
+      "src/lerobot/datasets/dataset_tools.py",
+      "src/lerobot/datasets/factory.py",
+      "src/lerobot/datasets/image_writer.py",
+      "src/lerobot/datasets/lerobot_dataset.py",
+      "src/lerobot/datasets/online_buffer.py",
+      "src/lerobot/datasets/pipeline_features.py",
+      "src/lerobot/datasets/push_dataset_to_hub/utils.py",
+      "src/lerobot/datasets/sampler.py",
+      "src/lerobot/datasets/streaming_dataset.py",
+      "src/lerobot/datasets/transforms.py",
+      "src/lerobot/datasets/utils.py",
+      "src/lerobot/datasets/v30/augment_dataset_quantile_stats.py",
+      "src/lerobot/datasets/v30/convert_dataset_v21_to_v30.py",
+      "src/lerobot/datasets/video_utils.py",
+      "src/lerobot/envs/__init__.py",
+      "src/lerobot/envs/configs.py",
+      "src/lerobot/envs/factory.py",
+      "src/lerobot/envs/libero.py",
+      "src/lerobot/envs/metaworld.py",
+      "src/lerobot/envs/utils.py",
+      "src/lerobot/model/kinematics.py",
+      "src/lerobot/motors/__init__.py",
+      "src/lerobot/motors/calibration_gui.py",
+      "src/lerobot/motors/dynamixel/__init__.py",
+      "src/lerobot/motors/dynamixel/dynamixel.py",
+      "src/lerobot/motors/dynamixel/tables.py",
+      "src/lerobot/motors/encoding_utils.py",
+      "src/lerobot/motors/feetech/__init__.py",
+      "src/lerobot/motors/feetech/feetech.py",
+      "src/lerobot/motors/feetech/tables.py",
+      "src/lerobot/motors/motors_bus.py",
+      "src/lerobot/optim/__init__.py",
+      "src/lerobot/optim/factory.py",
+      "src/lerobot/optim/optimizers.py",
+      "src/lerobot/optim/schedulers.py",
+      "src/lerobot/policies/__init__.py",
+      "src/lerobot/policies/act/configuration_act.py",
+      "src/lerobot/policies/act/modeling_act.py",
+      "src/lerobot/policies/act/processor_act.py",
+      "src/lerobot/policies/diffusion/configuration_diffusion.py",
+      "src/lerobot/policies/diffusion/modeling_diffusion.py",
+      "src/lerobot/policies/diffusion/processor_diffusion.py",
+      "src/lerobot/policies/factory.py",
+      "src/lerobot/policies/groot/__init__.py",
+      "src/lerobot/policies/groot/action_head/__init__.py",
+      "src/lerobot/policies/groot/action_head/action_encoder.py",
+      "src/lerobot/policies/groot/action_head/cross_attention_dit.py",
+      "src/lerobot/policies/groot/action_head/flow_matching_action_head.py",
+      "src/lerobot/policies/groot/configuration_groot.py",
+      "src/lerobot/policies/groot/eagle2_hg_model/configuration_eagle2_5_vl.py",
+      "src/lerobot/policies/groot/eagle2_hg_model/image_processing_eagle2_5_vl_fast.py",
+      "src/lerobot/policies/groot/eagle2_hg_model/modeling_eagle2_5_vl.py",
+      "src/lerobot/policies/groot/eagle2_hg_model/processing_eagle2_5_vl.py",
+      "src/lerobot/policies/groot/groot_n1.py",
+      "src/lerobot/policies/groot/modeling_groot.py",
+      "src/lerobot/policies/groot/processor_groot.py",
+      "src/lerobot/policies/groot/utils.py",
+      "src/lerobot/policies/pi0/__init__.py",
+      "src/lerobot/policies/pi0/configuration_pi0.py",
+      "src/lerobot/policies/pi0/modeling_pi0.py",
+      "src/lerobot/policies/pi0/processor_pi0.py",
+      "src/lerobot/policies/pi05/__init__.py",
+      "src/lerobot/policies/pi05/configuration_pi05.py",
+      "src/lerobot/policies/pi05/modeling_pi05.py",
+      "src/lerobot/policies/pi05/processor_pi05.py",
+      "src/lerobot/policies/pretrained.py",
+      "src/lerobot/policies/sac/configuration_sac.py",
+      "src/lerobot/policies/sac/modeling_sac.py",
+      "src/lerobot/policies/sac/processor_sac.py",
+      "src/lerobot/policies/sac/reward_model/configuration_classifier.py",
+      "src/lerobot/policies/sac/reward_model/modeling_classifier.py",
+      "src/lerobot/policies/sac/reward_model/processor_classifier.py",
+      "src/lerobot/policies/smolvla/configuration_smolvla.py",
+      "src/lerobot/policies/smolvla/modeling_smolvla.py",
+      "src/lerobot/policies/smolvla/processor_smolvla.py",
+      "src/lerobot/policies/smolvla/smolvlm_with_expert.py",
+      "src/lerobot/policies/tdmpc/configuration_tdmpc.py",
+      "src/lerobot/policies/tdmpc/modeling_tdmpc.py",
+      "src/lerobot/policies/tdmpc/processor_tdmpc.py",
+      "src/lerobot/policies/utils.py",
+      "src/lerobot/policies/vqbet/configuration_vqbet.py",
+      "src/lerobot/policies/vqbet/modeling_vqbet.py",
+      "src/lerobot/policies/vqbet/processor_vqbet.py",
+      "src/lerobot/policies/vqbet/vqbet_utils.py",
+      "src/lerobot/processor/__init__.py",
+      "src/lerobot/processor/batch_processor.py",
+      "src/lerobot/processor/converters.py",
+      "src/lerobot/processor/core.py",
+      "src/lerobot/processor/delta_action_processor.py",
+      "src/lerobot/processor/device_processor.py",
+      "src/lerobot/processor/factory.py",
+      "src/lerobot/processor/gym_action_processor.py",
+      "src/lerobot/processor/hil_processor.py",
+      "src/lerobot/processor/joint_observations_processor.py",
+      "src/lerobot/processor/migrate_policy_normalization.py",
+      "src/lerobot/processor/normalize_processor.py",
+      "src/lerobot/processor/observation_processor.py",
+      "src/lerobot/processor/pipeline.py",
+      "src/lerobot/processor/policy_robot_bridge.py",
+      "src/lerobot/processor/rename_processor.py",
+      "src/lerobot/processor/tokenizer_processor.py",
+      "src/lerobot/projects/vlbiman_sa/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/app/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/app/export_capture_montages.py",
+      "src/lerobot/projects/vlbiman_sa/app/export_self_check_visuals.py",
+      "src/lerobot/projects/vlbiman_sa/app/export_t3_frame_labels.py",
+      "src/lerobot/projects/vlbiman_sa/app/export_t5_visuals.py",
+      "src/lerobot/projects/vlbiman_sa/app/export_t6_visuals.py",
+      "src/lerobot/projects/vlbiman_sa/app/override_t3_segments.py",
+      "src/lerobot/projects/vlbiman_sa/app/play_mujoco_trajectory.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_execute_t6_on_robot.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_benchmark.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_extract_demo.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_from_coarse.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_grasp_dryrun.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_mujoco_validate.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_grasp_online.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_image_grasp_preview.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_live_grasp_preview.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_live_orange_base_pose.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_mujoco_dual_camera_scene.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_mujoco_dual_camera_viewer.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_one_shot_record.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_pipeline.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_pose_adaptation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_skill_build.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_t3_closed_loop_preview.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_t3_t4_revalidation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_t4_live_manual_view.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_trajectory_generation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_analysis.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_closed_loop_on_robot.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_closed_loop_validation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_pickorange_branch_compare.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_pickorange_frrg_validation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_pickorange_true_closed_loop_compare.py",
+      "src/lerobot/projects/vlbiman_sa/calib/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/calib/dump_gemini_intrinsics.py",
+      "src/lerobot/projects/vlbiman_sa/calib/handeye_solver.py",
+      "src/lerobot/projects/vlbiman_sa/calib/run_handeye_auto.py",
+      "src/lerobot/projects/vlbiman_sa/calib/run_handeye_calib.py",
+      "src/lerobot/projects/vlbiman_sa/core/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/core/contracts.py",
+      "src/lerobot/projects/vlbiman_sa/core/grasp_orchestrator.py",
+      "src/lerobot/projects/vlbiman_sa/demo/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/demo/io.py",
+      "src/lerobot/projects/vlbiman_sa/demo/rgbd_recorder.py",
+      "src/lerobot/projects/vlbiman_sa/demo/schema.py",
+      "src/lerobot/projects/vlbiman_sa/geometry/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/geometry/frame_manager.py",
+      "src/lerobot/projects/vlbiman_sa/geometry/geometry_compensator.py",
+      "src/lerobot/projects/vlbiman_sa/geometry/pose_adapter.py",
+      "src/lerobot/projects/vlbiman_sa/geometry/transforms.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/closed_loop_controller.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/coarse_handoff.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/contracts.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/feature_geometry.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/frame_math.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/observer.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/parameters/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/parameters/default_provider.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/parameters/demo_extractor.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/parameters/theta_schema.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/phase_guards.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/primitives/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/primitives/minimum_jerk.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/primitives/nominal_capture.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/primitives/nominal_close.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/primitives/nominal_lift.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/recovery_policy.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/residual/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/residual/bc_policy.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/residual/policy.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/residual/train_bc_residual.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/residual/zero_policy.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/safety_limits.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/scores.py",
+      "src/lerobot/projects/vlbiman_sa/grasp/state_machine.py",
+      "src/lerobot/projects/vlbiman_sa/runtime_env.py",
+      "src/lerobot/projects/vlbiman_sa/sim/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/sim/mujoco_dual_camera_scene.py",
+      "src/lerobot/projects/vlbiman_sa/skills/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/skills/invariance_classifier.py",
+      "src/lerobot/projects/vlbiman_sa/skills/keypose_segmenter.py",
+      "src/lerobot/projects/vlbiman_sa/skills/skill_bank.py",
+      "src/lerobot/projects/vlbiman_sa/trajectory/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/trajectory/ik_solution_selector.py",
+      "src/lerobot/projects/vlbiman_sa/trajectory/progressive_ik.py",
+      "src/lerobot/projects/vlbiman_sa/trajectory/trajectory_composer.py",
+      "src/lerobot/projects/vlbiman_sa/vision/__init__.py",
+      "src/lerobot/projects/vlbiman_sa/vision/anchor_estimator.py",
+      "src/lerobot/projects/vlbiman_sa/vision/mask_tracker.py",
+      "src/lerobot/projects/vlbiman_sa/vision/orientation_moments.py",
+      "src/lerobot/projects/vlbiman_sa/vision/vlm_segmentor.py",
+      "src/lerobot/rl/actor.py",
+      "src/lerobot/rl/buffer.py",
+      "src/lerobot/rl/crop_dataset_roi.py",
+      "src/lerobot/rl/eval_policy.py",
+      "src/lerobot/rl/gym_manipulator.py",
+      "src/lerobot/rl/learner.py",
+      "src/lerobot/rl/learner_service.py",
+      "src/lerobot/rl/process.py",
+      "src/lerobot/rl/queue.py",
+      "src/lerobot/rl/wandb_utils.py",
+      "src/lerobot/robots/__init__.py",
+      "src/lerobot/robots/bi_so100_follower/__init__.py",
+      "src/lerobot/robots/bi_so100_follower/bi_so100_follower.py",
+      "src/lerobot/robots/bi_so100_follower/config_bi_so100_follower.py",
+      "src/lerobot/robots/config.py",
+      "src/lerobot/robots/hope_jr/__init__.py",
+      "src/lerobot/robots/hope_jr/config_hope_jr.py",
+      "src/lerobot/robots/hope_jr/hope_jr_arm.py",
+      "src/lerobot/robots/hope_jr/hope_jr_hand.py",
+      "src/lerobot/robots/koch_follower/__init__.py",
+      "src/lerobot/robots/koch_follower/config_koch_follower.py",
+      "src/lerobot/robots/koch_follower/koch_follower.py",
+      "src/lerobot/robots/lekiwi/__init__.py",
+      "src/lerobot/robots/lekiwi/config_lekiwi.py",
+      "src/lerobot/robots/lekiwi/lekiwi.py",
+      "src/lerobot/robots/lekiwi/lekiwi_client.py",
+      "src/lerobot/robots/lekiwi/lekiwi_host.py",
+      "src/lerobot/robots/reachy2/__init__.py",
+      "src/lerobot/robots/reachy2/configuration_reachy2.py",
+      "src/lerobot/robots/reachy2/robot_reachy2.py",
+      "src/lerobot/robots/robot.py",
+      "src/lerobot/robots/so100_follower/__init__.py",
+      "src/lerobot/robots/so100_follower/config_so100_follower.py",
+      "src/lerobot/robots/so100_follower/robot_kinematic_processor.py",
+      "src/lerobot/robots/so100_follower/so100_follower.py",
+      "src/lerobot/robots/so101_follower/__init__.py",
+      "src/lerobot/robots/so101_follower/config_so101_follower.py",
+      "src/lerobot/robots/so101_follower/so101_follower.py",
+      "src/lerobot/robots/utils.py",
+      "src/lerobot/scripts/lerobot_calibrate.py",
+      "src/lerobot/scripts/lerobot_dataset_viz.py",
+      "src/lerobot/scripts/lerobot_edit_dataset.py",
+      "src/lerobot/scripts/lerobot_eval.py",
+      "src/lerobot/scripts/lerobot_find_cameras.py",
+      "src/lerobot/scripts/lerobot_find_joint_limits.py",
+      "src/lerobot/scripts/lerobot_find_port.py",
+      "src/lerobot/scripts/lerobot_imgtransform_viz.py",
+      "src/lerobot/scripts/lerobot_info.py",
+      "src/lerobot/scripts/lerobot_record.py",
+      "src/lerobot/scripts/lerobot_replay.py",
+      "src/lerobot/scripts/lerobot_setup_motors.py",
+      "src/lerobot/scripts/lerobot_teleoperate.py",
+      "src/lerobot/scripts/lerobot_train.py",
+      "src/lerobot/teleoperators/__init__.py",
+      "src/lerobot/teleoperators/bi_so100_leader/__init__.py",
+      "src/lerobot/teleoperators/bi_so100_leader/bi_so100_leader.py",
+      "src/lerobot/teleoperators/bi_so100_leader/config_bi_so100_leader.py",
+      "src/lerobot/teleoperators/config.py",
+      "src/lerobot/teleoperators/gamepad/__init__.py",
+      "src/lerobot/teleoperators/gamepad/configuration_gamepad.py",
+      "src/lerobot/teleoperators/gamepad/gamepad_utils.py",
+      "src/lerobot/teleoperators/gamepad/teleop_gamepad.py",
+      "src/lerobot/teleoperators/homunculus/__init__.py",
+      "src/lerobot/teleoperators/homunculus/config_homunculus.py",
+      "src/lerobot/teleoperators/homunculus/homunculus_arm.py",
+      "src/lerobot/teleoperators/homunculus/homunculus_glove.py",
+      "src/lerobot/teleoperators/homunculus/joints_translation.py",
+      "src/lerobot/teleoperators/keyboard/__init__.py",
+      "src/lerobot/teleoperators/keyboard/configuration_keyboard.py",
+      "src/lerobot/teleoperators/keyboard/teleop_keyboard.py",
+      "src/lerobot/teleoperators/koch_leader/__init__.py",
+      "src/lerobot/teleoperators/koch_leader/config_koch_leader.py",
+      "src/lerobot/teleoperators/koch_leader/koch_leader.py",
+      "src/lerobot/teleoperators/phone/__init__.py",
+      "src/lerobot/teleoperators/phone/config_phone.py",
+      "src/lerobot/teleoperators/phone/phone_processor.py",
+      "src/lerobot/teleoperators/phone/teleop_phone.py",
+      "src/lerobot/teleoperators/reachy2_teleoperator/__init__.py",
+      "src/lerobot/teleoperators/reachy2_teleoperator/config_reachy2_teleoperator.py",
+      "src/lerobot/teleoperators/reachy2_teleoperator/reachy2_teleoperator.py",
+      "src/lerobot/teleoperators/so100_leader/__init__.py",
+      "src/lerobot/teleoperators/so100_leader/config_so100_leader.py",
+      "src/lerobot/teleoperators/so100_leader/so100_leader.py",
+      "src/lerobot/teleoperators/so101_leader/__init__.py",
+      "src/lerobot/teleoperators/so101_leader/config_so101_leader.py",
+      "src/lerobot/teleoperators/so101_leader/so101_leader.py",
+      "src/lerobot/teleoperators/teleoperator.py",
+      "src/lerobot/teleoperators/utils.py",
+      "src/lerobot/transport/services_pb2.py",
+      "src/lerobot/transport/services_pb2_grpc.py",
+      "src/lerobot/transport/utils.py",
+      "src/lerobot/utils/constants.py",
+      "src/lerobot/utils/control_utils.py",
+      "src/lerobot/utils/errors.py",
+      "src/lerobot/utils/hub.py",
+      "src/lerobot/utils/import_utils.py",
+      "src/lerobot/utils/io_utils.py",
+      "src/lerobot/utils/logging_utils.py",
+      "src/lerobot/utils/random_utils.py",
+      "src/lerobot/utils/robot_utils.py",
+      "src/lerobot/utils/rotation.py",
+      "src/lerobot/utils/train_utils.py",
+      "src/lerobot/utils/transition.py",
+      "src/lerobot/utils/utils.py",
+      "src/lerobot/utils/visualization_utils.py",
+      "tests/artifacts/datasets/save_dataset_to_safetensors.py",
+      "tests/artifacts/image_transforms/save_image_transforms_to_safetensors.py",
+      "tests/artifacts/policies/save_policy_to_safetensors.py",
+      "tests/async_inference/test_e2e.py",
+      "tests/async_inference/test_helpers.py",
+      "tests/async_inference/test_policy_server.py",
+      "tests/async_inference/test_robot_client.py",
+      "tests/cameras/test_opencv.py",
+      "tests/cameras/test_reachy2_camera.py",
+      "tests/cameras/test_realsense.py",
+      "tests/configs/test_plugin_loading.py",
+      "tests/conftest.py",
+      "tests/datasets/test_aggregate.py",
+      "tests/datasets/test_compute_stats.py",
+      "tests/datasets/test_dataset_tools.py",
+      "tests/datasets/test_dataset_utils.py",
+      "tests/datasets/test_datasets.py",
+      "tests/datasets/test_delta_timestamps.py",
+      "tests/datasets/test_image_transforms.py",
+      "tests/datasets/test_image_writer.py",
+      "tests/datasets/test_online_buffer.py",
+      "tests/datasets/test_quantiles_dataset_integration.py",
+      "tests/datasets/test_sampler.py",
+      "tests/datasets/test_streaming.py",
+      "tests/datasets/test_visualize_dataset.py",
+      "tests/envs/test_envs.py",
+      "tests/fixtures/constants.py",
+      "tests/fixtures/dataset_factories.py",
+      "tests/fixtures/files.py",
+      "tests/fixtures/hub.py",
+      "tests/fixtures/optimizers.py",
+      "tests/mocks/mock_dynamixel.py",
+      "tests/mocks/mock_feetech.py",
+      "tests/mocks/mock_motors_bus.py",
+      "tests/mocks/mock_robot.py",
+      "tests/mocks/mock_serial_patch.py",
+      "tests/mocks/mock_teleop.py",
+      "tests/motors/test_dynamixel.py",
+      "tests/motors/test_feetech.py",
+      "tests/motors/test_motors_bus.py",
+      "tests/optim/test_optimizers.py",
+      "tests/optim/test_schedulers.py",
+      "tests/plugins/reachy2_sdk.py",
+      "tests/policies/groot/test_groot_lerobot.py",
+      "tests/policies/groot/test_groot_vs_original.py",
+      "tests/policies/hilserl/test_modeling_classifier.py",
+      "tests/policies/pi0_pi05/test_pi0.py",
+      "tests/policies/pi0_pi05/test_pi05.py",
+      "tests/policies/pi0_pi05/test_pi05_original_vs_lerobot.py",
+      "tests/policies/pi0_pi05/test_pi0_original_vs_lerobot.py",
+      "tests/policies/test_policies.py",
+      "tests/policies/test_sac_config.py",
+      "tests/policies/test_sac_policy.py",
+      "tests/processor/test_act_processor.py",
+      "tests/processor/test_batch_conversion.py",
+      "tests/processor/test_batch_processor.py",
+      "tests/processor/test_classifier_processor.py",
+      "tests/processor/test_converters.py",
+      "tests/processor/test_device_processor.py",
+      "tests/processor/test_diffusion_processor.py",
+      "tests/processor/test_migration_detection.py",
+      "tests/processor/test_normalize_processor.py",
+      "tests/processor/test_observation_processor.py",
+      "tests/processor/test_pipeline.py",
+      "tests/processor/test_pipeline_from_pretrained_helpers.py",
+      "tests/processor/test_policy_robot_bridge.py",
+      "tests/processor/test_rename_processor.py",
+      "tests/processor/test_sac_processor.py",
+      "tests/processor/test_smolvla_processor.py",
+      "tests/processor/test_tdmpc_processor.py",
+      "tests/processor/test_tokenizer_processor.py",
+      "tests/processor/test_vqbet_processor.py",
+      "tests/projects/vlbiman_sa/test_cjjarm_sim_dual_scene.py",
+      "tests/projects/vlbiman_sa/test_frame_manager.py",
+      "tests/projects/vlbiman_sa/test_frrg_benchmark.py",
+      "tests/projects/vlbiman_sa/test_frrg_coarse_handoff.py",
+      "tests/projects/vlbiman_sa/test_frrg_config.py",
+      "tests/projects/vlbiman_sa/test_frrg_contracts.py",
+      "tests/projects/vlbiman_sa/test_frrg_controller.py",
+      "tests/projects/vlbiman_sa/test_frrg_demo_extractor.py",
+      "tests/projects/vlbiman_sa/test_frrg_feature_geometry.py",
+      "tests/projects/vlbiman_sa/test_frrg_frame_math.py",
+      "tests/projects/vlbiman_sa/test_frrg_nominal_primitives.py",
+      "tests/projects/vlbiman_sa/test_frrg_observer.py",
+      "tests/projects/vlbiman_sa/test_frrg_phase_guards.py",
+      "tests/projects/vlbiman_sa/test_frrg_recovery_policy.py",
+      "tests/projects/vlbiman_sa/test_frrg_safety_limits.py",
+      "tests/projects/vlbiman_sa/test_frrg_scores.py",
+      "tests/projects/vlbiman_sa/test_frrg_state_machine.py",
+      "tests/projects/vlbiman_sa/test_frrg_zero_residual.py",
+      "tests/projects/vlbiman_sa/test_ik_solution_selector.py",
+      "tests/projects/vlbiman_sa/test_mujoco_dual_camera_scene.py",
+      "tests/projects/vlbiman_sa/test_rgbd_recorder.py",
+      "tests/projects/vlbiman_sa/test_run_pipeline.py",
+      "tests/rl/test_actor.py",
+      "tests/rl/test_actor_learner.py",
+      "tests/rl/test_learner_service.py",
+      "tests/rl/test_queue.py",
+      "tests/robots/test_reachy2.py",
+      "tests/robots/test_so100_follower.py",
+      "tests/teleoperators/test_reachy2_teleoperator.py",
+      "tests/test_available.py",
+      "tests/test_control_robot.py",
+      "tests/training/test_multi_gpu.py",
+      "tests/training/test_visual_validation.py",
+      "tests/transport/test_transport_utils.py",
+      "tests/utils.py",
+      "tests/utils/test_encoding_utils.py",
+      "tests/utils/test_io_utils.py",
+      "tests/utils/test_logging_utils.py",
+      "tests/utils/test_process.py",
+      "tests/utils/test_random_utils.py",
+      "tests/utils/test_replay_buffer.py",
+      "tests/utils/test_train_utils.py",
+      "tests/utils/test_visualization_utils.py",
+      "tools/audit/run_simulation_audit.py"
+    ],
+    "entrypoints": [
+      "benchmarks/video/run_video_benchmark.py",
+      "examples/lekiwi/teleoperate.py",
+      "examples/phone_to_so100/teleoperate.py",
+      "examples/so100_to_so100_EE/teleoperate.py",
+      "lerobot_camera_gemini335l/runtime_env.py",
+      "lerobot_camera_gemini335l/smoke_test.py",
+      "lerobot_teleoperator_zhonglin/lerobot_teleoperator_zhonglin/zhonglin_teleop.py",
+      "scripts/teleop_cjjarm_keyboard.py",
+      "scripts/teleop_cjjarm_zhonglin.py",
+      "src/lerobot/configs/train.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_execute_t6_on_robot.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_benchmark.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_extract_demo.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_from_coarse.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_grasp_dryrun.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_frrg_mujoco_validate.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_grasp_online.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_image_grasp_preview.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_live_grasp_preview.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_live_orange_base_pose.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_mujoco_dual_camera_scene.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_mujoco_dual_camera_viewer.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_one_shot_record.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_pipeline.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_pose_adaptation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_skill_build.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_t3_closed_loop_preview.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_t3_t4_revalidation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_t4_live_manual_view.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_trajectory_generation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_analysis.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_closed_loop_on_robot.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_closed_loop_validation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_pickorange_branch_compare.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_pickorange_frrg_validation.py",
+      "src/lerobot/projects/vlbiman_sa/app/run_visual_pickorange_true_closed_loop_compare.py",
+      "src/lerobot/projects/vlbiman_sa/calib/run_handeye_auto.py",
+      "src/lerobot/projects/vlbiman_sa/calib/run_handeye_calib.py",
+      "src/lerobot/projects/vlbiman_sa/runtime_env.py",
+      "src/lerobot/scripts/lerobot_teleoperate.py",
+      "src/lerobot/scripts/lerobot_train.py",
+      "src/lerobot/teleoperators/gamepad/teleop_gamepad.py",
+      "src/lerobot/teleoperators/keyboard/teleop_keyboard.py",
+      "src/lerobot/teleoperators/phone/teleop_phone.py",
+      "src/lerobot/teleoperators/reachy2_teleoperator/config_reachy2_teleoperator.py",
+      "src/lerobot/teleoperators/reachy2_teleoperator/reachy2_teleoperator.py",
+      "src/lerobot/teleoperators/teleoperator.py",
+      "tests/conftest.py",
+      "tests/mocks/mock_teleop.py",
+      "tests/teleoperators/test_reachy2_teleoperator.py",
+      "tools/audit/run_simulation_audit.py"
+    ]
+  },
+  "load_chain": {
+    "cjjarm_sim_config_defaults": {
+      "urdf_path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.urdf",
+      "scene_base_mjcf_path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf",
+      "scene_profile_default": "dual_camera_target"
+    },
+    "actual_runtime_chain": [
+      "scripts/teleop_cjjarm_keyboard.py -> CjjArmSimConfig -> CjjArmSim",
+      "scripts/teleop_cjjarm_zhonglin.py -> CjjArmSimConfig -> CjjArmSim",
+      "run_visual_closed_loop_validation.py -> build_dual_camera_scene(...) -> MjModel.from_xml_string(...)",
+      "play_mujoco_trajectory.py -> build_dual_camera_scene(...) or raw MJCF in legacy mode",
+      "run_frrg_mujoco_validate.py -> CjjArmSim(default config)"
+    ],
+    "key_observation": "default cjjarm_sim runtime loads a generated MJCF scene built from the base home MJCF plus camera and target bodies; URDF is still used for kinematics and wrist camera mount extraction; legacy cjjarm_sim falls back to loading the URDF directly."
+  },
+  "urdf": {
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.urdf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.urdf",
+      "root_links": [
+        "base_link"
+      ],
+      "links": [
+        {
+          "name": "base_link",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/base_link.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/base_link.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/base_link.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/base_link.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.4455,
+          "inertia": {
+            "ixx": 0.00017,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 0.00017,
+            "iyz": 0.0,
+            "izz": 0.00016
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link1-2",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link1-2.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link1-2.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link1-2.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link1-2.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.0886,
+          "inertia": {
+            "ixx": 8e-05,
+            "ixy": 0.0,
+            "ixz": 1e-05,
+            "iyy": 3e-05,
+            "iyz": 0.0,
+            "izz": 8e-05
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link2-3",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link2-3.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link2-3.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link2-3.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link2-3.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 1.0327,
+          "inertia": {
+            "ixx": 0.00051,
+            "ixy": 1e-05,
+            "ixz": -4e-05,
+            "iyy": 0.01599,
+            "iyz": 0.0,
+            "izz": 0.01605
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link3-4",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link3-4.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link3-4.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link3-4.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link3-4.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.6073,
+          "inertia": {
+            "ixx": 0.00036,
+            "ixy": -3e-05,
+            "ixz": 0.00039,
+            "iyy": 0.00423,
+            "iyz": 1e-05,
+            "izz": 0.0042
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link4-5",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link4-5.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link4-5.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link4-5.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link4-5.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.4232,
+          "inertia": {
+            "ixx": 0.00019,
+            "ixy": -2e-05,
+            "ixz": -9e-05,
+            "iyy": 0.00023,
+            "iyz": 2e-05,
+            "izz": 0.00014
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link5-6",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link5-6.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link5-6.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link5-6.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link5-6.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.4214,
+          "inertia": {
+            "ixx": 0.00083,
+            "ixy": 0.0,
+            "ixz": 7e-05,
+            "iyy": 0.00082,
+            "iyz": 0.0,
+            "izz": 0.00026
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link6-7",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link6-7.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link6-7.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link6-7.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link6-7.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.8506,
+          "inertia": {
+            "ixx": 0.00038,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 0.00028,
+            "iyz": 0.0,
+            "izz": 0.0005
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "finger_left",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/finger_left.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/finger_left.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/finger_left.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_left.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.05,
+          "inertia": {
+            "ixx": 2e-05,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 3e-05,
+            "iyz": 0.0,
+            "izz": 3e-05
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "finger_right",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/finger_right.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/finger_right.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/finger_right.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_right.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.05,
+          "inertia": {
+            "ixx": 2e-05,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 3e-05,
+            "iyz": 0.0,
+            "izz": 3e-05
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "tool0",
+          "has_visual": false,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "camera",
+          "has_visual": false,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        }
+      ],
+      "joints": [
+        {
+          "name": "joint1",
+          "type": "revolute",
+          "parent_link": "base_link",
+          "child_link": "link1-2",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -2.0943951023931953,
+            "upper": 2.0943951023931953,
+            "effort": 100.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint2",
+          "type": "revolute",
+          "parent_link": "link1-2",
+          "child_link": "link2-3",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -3.141592653589793,
+            "upper": 0.01,
+            "effort": 100.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint3",
+          "type": "revolute",
+          "parent_link": "link2-3",
+          "child_link": "link3-4",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -0.01,
+            "upper": 4.71238898038469,
+            "effort": 100.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint4",
+          "type": "revolute",
+          "parent_link": "link3-4",
+          "child_link": "link4-5",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -1.95,
+            "upper": 1.5707963267948966,
+            "effort": 20.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint5",
+          "type": "revolute",
+          "parent_link": "link4-5",
+          "child_link": "link5-6",
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "limit": {
+            "lower": -1.5707963267948966,
+            "upper": 1.5707963267948966,
+            "effort": 20.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint6",
+          "type": "revolute",
+          "parent_link": "link5-6",
+          "child_link": "link6-7",
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -3.141592653589793,
+            "upper": 3.141592653589793,
+            "effort": 20.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "gripper_left",
+          "type": "prismatic",
+          "parent_link": "link6-7",
+          "child_link": "finger_left",
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -0.045,
+            "upper": 0.001,
+            "effort": 20.0,
+            "velocity": 0.18
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": true
+        },
+        {
+          "name": "gripper_right",
+          "type": "prismatic",
+          "parent_link": "link6-7",
+          "child_link": "finger_right",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -0.045,
+            "upper": 0.001,
+            "effort": 20.0,
+            "velocity": 0.18
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": true
+        },
+        {
+          "name": "gripper_tool0",
+          "type": "fixed",
+          "parent_link": "link6-7",
+          "child_link": "tool0",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": true
+        },
+        {
+          "name": "camera_joint",
+          "type": "fixed",
+          "parent_link": "link6-7",
+          "child_link": "camera",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        }
+      ],
+      "summary": {
+        "link_count": 11,
+        "joint_count": 10,
+        "links_missing_collision": [
+          "tool0",
+          "camera"
+        ],
+        "links_missing_inertial": [
+          "tool0",
+          "camera"
+        ],
+        "links_with_mesh_collision": [
+          "base_link",
+          "link1-2",
+          "link2-3",
+          "link3-4",
+          "link4-5",
+          "link5-6",
+          "link6-7",
+          "finger_left",
+          "finger_right"
+        ],
+        "links_with_primitive_collision": [],
+        "root_link_has_inertial": true,
+        "gripper_joints": [
+          "gripper_left",
+          "gripper_right",
+          "gripper_tool0"
+        ]
+      }
+    },
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.urdf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.urdf",
+      "root_links": [
+        "world"
+      ],
+      "links": [
+        {
+          "name": "world",
+          "has_visual": false,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "base_link",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/base_link.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/base_link.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/base_link.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/base_link.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.4455,
+          "inertia": {
+            "ixx": 0.00017,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 0.00017,
+            "iyz": 0.0,
+            "izz": 0.00016
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link1-2",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link1-2.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link1-2.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link1-2.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link1-2.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.0886,
+          "inertia": {
+            "ixx": 8e-05,
+            "ixy": 0.0,
+            "ixz": 1e-05,
+            "iyy": 3e-05,
+            "iyz": 0.0,
+            "izz": 8e-05
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link2-3",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link2-3.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link2-3.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link2-3.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link2-3.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 1.0327,
+          "inertia": {
+            "ixx": 0.00051,
+            "ixy": 1e-05,
+            "ixz": -4e-05,
+            "iyy": 0.01599,
+            "iyz": 0.0,
+            "izz": 0.01605
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link3-4",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link3-4.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link3-4.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link3-4.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link3-4.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.6073,
+          "inertia": {
+            "ixx": 0.00036,
+            "ixy": -3e-05,
+            "ixz": 0.00039,
+            "iyy": 0.00423,
+            "iyz": 1e-05,
+            "izz": 0.0042
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link4-5",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link4-5.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link4-5.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link4-5.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link4-5.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.4232,
+          "inertia": {
+            "ixx": 0.00019,
+            "ixy": -2e-05,
+            "ixz": -9e-05,
+            "iyy": 0.00023,
+            "iyz": 2e-05,
+            "izz": 0.00014
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link5-6",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link5-6.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link5-6.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link5-6.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link5-6.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.4214,
+          "inertia": {
+            "ixx": 0.00083,
+            "ixy": 0.0,
+            "ixz": 7e-05,
+            "iyy": 0.00082,
+            "iyz": 0.0,
+            "izz": 0.00026
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "link6-7",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/link6-7.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/link6-7.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/link6-7.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link6-7.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.8506,
+          "inertia": {
+            "ixx": 0.00038,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 0.00028,
+            "iyz": 0.0,
+            "izz": 0.0005
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "finger_left",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/finger_left.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/finger_left.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/finger_left.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_left.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.05,
+          "inertia": {
+            "ixx": 2e-05,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 3e-05,
+            "iyz": 0.0,
+            "izz": 3e-05
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "finger_right",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": true,
+          "visuals": [
+            {
+              "type": "mesh",
+              "filename": "meshes/visual/finger_right.glb",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/visual/finger_right.glb",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "collisions": [
+            {
+              "type": "mesh",
+              "filename": "meshes/collision/finger_right.stl",
+              "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_right.stl",
+              "path_exists": true,
+              "scale": null
+            }
+          ],
+          "mass": 0.05,
+          "inertia": {
+            "ixx": 2e-05,
+            "ixy": 0.0,
+            "ixz": 0.0,
+            "iyy": 3e-05,
+            "iyz": 0.0,
+            "izz": 3e-05
+          },
+          "collision_types": [
+            "mesh"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": true
+        },
+        {
+          "name": "tool0",
+          "has_visual": false,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "camera",
+          "has_visual": false,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "floor",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                4.0,
+                4.0,
+                0.02
+              ]
+            }
+          ],
+          "collisions": [
+            {
+              "type": "box",
+              "size": [
+                4.0,
+                4.0,
+                0.02
+              ]
+            }
+          ],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [
+            "box"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "wall_back",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                4.0,
+                0.05,
+                2.5
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "wall_side",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                4.0,
+                2.5
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "rug",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                1.4,
+                0.9,
+                0.01
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "table_top",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                1.2,
+                0.7,
+                0.05
+              ]
+            }
+          ],
+          "collisions": [
+            {
+              "type": "box",
+              "size": [
+                1.2,
+                0.7,
+                0.05
+              ]
+            }
+          ],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [
+            "box"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "table_leg_fl",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                0.05,
+                0.7
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "table_leg_fr",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                0.05,
+                0.7
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "table_leg_bl",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                0.05,
+                0.7
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "table_leg_br",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                0.05,
+                0.7
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "cabinet",
+          "has_visual": true,
+          "has_collision": false,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.6,
+                0.35,
+                0.8
+              ]
+            }
+          ],
+          "collisions": [],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "box_object",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.14,
+                0.1,
+                0.08
+              ]
+            }
+          ],
+          "collisions": [
+            {
+              "type": "box",
+              "size": [
+                0.14,
+                0.1,
+                0.08
+              ]
+            }
+          ],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [
+            "box"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        },
+        {
+          "name": "block_object",
+          "has_visual": true,
+          "has_collision": true,
+          "has_inertial": false,
+          "visuals": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ]
+            }
+          ],
+          "collisions": [
+            {
+              "type": "box",
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ]
+            }
+          ],
+          "mass": null,
+          "inertia": null,
+          "collision_types": [
+            "box"
+          ],
+          "visual_mesh_paths_exist": true,
+          "collision_mesh_paths_exist": true,
+          "stl_mesh_without_scale": false
+        }
+      ],
+      "joints": [
+        {
+          "name": "world_to_base",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "base_link",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint1",
+          "type": "revolute",
+          "parent_link": "base_link",
+          "child_link": "link1-2",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -2.0943951023931953,
+            "upper": 2.0943951023931953,
+            "effort": 100.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint2",
+          "type": "revolute",
+          "parent_link": "link1-2",
+          "child_link": "link2-3",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -3.141592653589793,
+            "upper": 0.01,
+            "effort": 100.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint3",
+          "type": "revolute",
+          "parent_link": "link2-3",
+          "child_link": "link3-4",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -0.01,
+            "upper": 4.71238898038469,
+            "effort": 100.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint4",
+          "type": "revolute",
+          "parent_link": "link3-4",
+          "child_link": "link4-5",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -1.95,
+            "upper": 1.5707963267948966,
+            "effort": 20.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint5",
+          "type": "revolute",
+          "parent_link": "link4-5",
+          "child_link": "link5-6",
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "limit": {
+            "lower": -1.5707963267948966,
+            "upper": 1.5707963267948966,
+            "effort": 20.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "joint6",
+          "type": "revolute",
+          "parent_link": "link5-6",
+          "child_link": "link6-7",
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -3.141592653589793,
+            "upper": 3.141592653589793,
+            "effort": 20.0,
+            "velocity": 5.4
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "gripper_left",
+          "type": "prismatic",
+          "parent_link": "link6-7",
+          "child_link": "finger_left",
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -0.045,
+            "upper": 0.001,
+            "effort": 20.0,
+            "velocity": 0.18
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": true
+        },
+        {
+          "name": "gripper_right",
+          "type": "prismatic",
+          "parent_link": "link6-7",
+          "child_link": "finger_right",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "limit": {
+            "lower": -0.045,
+            "upper": 0.001,
+            "effort": 20.0,
+            "velocity": 0.18
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": true
+        },
+        {
+          "name": "gripper_tool0",
+          "type": "fixed",
+          "parent_link": "link6-7",
+          "child_link": "tool0",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": true
+        },
+        {
+          "name": "camera_joint",
+          "type": "fixed",
+          "parent_link": "link6-7",
+          "child_link": "camera",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_floor",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "floor",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_wall_back",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "wall_back",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_wall_side",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "wall_side",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_rug",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "rug",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_table_top",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "table_top",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_table_leg_fl",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "table_leg_fl",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_table_leg_fr",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "table_leg_fr",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_table_leg_bl",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "table_leg_bl",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_table_leg_br",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "table_leg_br",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_cabinet",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "cabinet",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_box",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "box_object",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        },
+        {
+          "name": "world_to_block",
+          "type": "fixed",
+          "parent_link": "world",
+          "child_link": "block_object",
+          "axis": null,
+          "limit": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          },
+          "dynamics": {
+            "damping": null,
+            "friction": null
+          },
+          "mimic": null,
+          "is_gripper_joint": false
+        }
+      ],
+      "summary": {
+        "link_count": 24,
+        "joint_count": 23,
+        "links_missing_collision": [
+          "world",
+          "tool0",
+          "camera",
+          "wall_back",
+          "wall_side",
+          "rug",
+          "table_leg_fl",
+          "table_leg_fr",
+          "table_leg_bl",
+          "table_leg_br",
+          "cabinet"
+        ],
+        "links_missing_inertial": [
+          "world",
+          "tool0",
+          "camera",
+          "floor",
+          "wall_back",
+          "wall_side",
+          "rug",
+          "table_top",
+          "table_leg_fl",
+          "table_leg_fr",
+          "table_leg_bl",
+          "table_leg_br",
+          "cabinet",
+          "box_object",
+          "block_object"
+        ],
+        "links_with_mesh_collision": [
+          "base_link",
+          "link1-2",
+          "link2-3",
+          "link3-4",
+          "link4-5",
+          "link5-6",
+          "link6-7",
+          "finger_left",
+          "finger_right"
+        ],
+        "links_with_primitive_collision": [
+          "floor",
+          "table_top",
+          "box_object",
+          "block_object"
+        ],
+        "root_link_has_inertial": false,
+        "gripper_joints": [
+          "gripper_left",
+          "gripper_right",
+          "gripper_tool0"
+        ]
+      }
+    }
+  },
+  "mjcf": {
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.mjcf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.mjcf",
+      "option": {},
+      "default_geom": {},
+      "worldbody_bodies": [
+        {
+          "name": "link1-2",
+          "parent": "<worldbody>",
+          "depth": 0,
+          "pos": [
+            0.0,
+            0.0,
+            0.0615
+          ],
+          "quat": null
+        },
+        {
+          "name": "link2-3",
+          "parent": "link1-2",
+          "depth": 1,
+          "pos": [
+            0.02,
+            0.0,
+            0.0385
+          ],
+          "quat": null
+        },
+        {
+          "name": "link3-4",
+          "parent": "link2-3",
+          "depth": 2,
+          "pos": [
+            -0.264,
+            0.0,
+            0.0
+          ],
+          "quat": null
+        },
+        {
+          "name": "link4-5",
+          "parent": "link3-4",
+          "depth": 3,
+          "pos": [
+            0.244004,
+            0.0,
+            0.059971
+          ],
+          "quat": null
+        },
+        {
+          "name": "link5-6",
+          "parent": "link4-5",
+          "depth": 4,
+          "pos": [
+            0.061868,
+            0.0,
+            0.0425
+          ],
+          "quat": null
+        },
+        {
+          "name": "link6-7",
+          "parent": "link5-6",
+          "depth": 5,
+          "pos": [
+            0.032,
+            0.0,
+            -0.0425
+          ],
+          "quat": null
+        },
+        {
+          "name": "finger_left",
+          "parent": "link6-7",
+          "depth": 6,
+          "pos": null,
+          "quat": null
+        },
+        {
+          "name": "finger_right",
+          "parent": "link6-7",
+          "depth": 6,
+          "pos": null,
+          "quat": null
+        }
+      ],
+      "joints": [
+        {
+          "name": "joint1",
+          "type": "hinge",
+          "body": "link1-2",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "range": [
+            -2.0944,
+            2.0944
+          ],
+          "actuatorfrcrange": [
+            -100.0,
+            100.0
+          ]
+        },
+        {
+          "name": "joint2",
+          "type": "hinge",
+          "body": "link2-3",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -3.14159,
+            0.01
+          ],
+          "actuatorfrcrange": [
+            -100.0,
+            100.0
+          ]
+        },
+        {
+          "name": "joint3",
+          "type": "hinge",
+          "body": "link3-4",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -0.01,
+            4.71239
+          ],
+          "actuatorfrcrange": [
+            -100.0,
+            100.0
+          ]
+        },
+        {
+          "name": "joint4",
+          "type": "hinge",
+          "body": "link4-5",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -1.95,
+            1.5708
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "joint5",
+          "type": "hinge",
+          "body": "link5-6",
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "range": [
+            -1.5708,
+            1.5708
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "joint6",
+          "type": "hinge",
+          "body": "link6-7",
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -3.14159,
+            3.14159
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "gripper_left",
+          "type": "slide",
+          "body": "finger_left",
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "range": [
+            -0.045,
+            0.001
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "gripper_right",
+          "type": "slide",
+          "body": "finger_right",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -0.045,
+            0.001
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        }
+      ],
+      "geoms": [
+        {
+          "name": null,
+          "body": "<worldbody>",
+          "type": "mesh",
+          "size": null,
+          "mesh": "base_link",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link1-2",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link1-2",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link2-3",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link2-3",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link3-4",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link3-4",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link4-5",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link4-5",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link5-6",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link5-6",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link6-7",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link6-7",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "finger_left",
+          "type": "mesh",
+          "size": null,
+          "mesh": "finger_left",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "finger_right",
+          "type": "mesh",
+          "size": null,
+          "mesh": "finger_right",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        }
+      ],
+      "asset_meshes": [
+        {
+          "name": "base_link",
+          "file": "base_link.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/base_link.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link1-2",
+          "file": "link1-2.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link1-2.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link2-3",
+          "file": "link2-3.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link2-3.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link3-4",
+          "file": "link3-4.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link3-4.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link4-5",
+          "file": "link4-5.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link4-5.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link5-6",
+          "file": "link5-6.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link5-6.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link6-7",
+          "file": "link6-7.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link6-7.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "finger_left",
+          "file": "finger_left.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_left.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "finger_right",
+          "file": "finger_right.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_right.stl",
+          "path_exists": true,
+          "scale": null
+        }
+      ],
+      "actuators": [],
+      "cameras": [],
+      "lights": [],
+      "summary": {
+        "body_count": 8,
+        "joint_count": 8,
+        "geom_count": 9,
+        "actuator_count": 0,
+        "camera_count": 0,
+        "light_count": 0,
+        "collision_disabled_geoms": [],
+        "mesh_geoms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "primitive_geoms": [],
+        "mesh_assets_missing": [],
+        "freejoints": [],
+        "interaction_object_names": []
+      }
+    },
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf",
+      "option": {
+        "timestep": "0.002",
+        "gravity": "0 0 -9.81",
+        "integrator": "RK4",
+        "iterations": "50"
+      },
+      "default_geom": {
+        "friction": "1.0 0.005 0.0001",
+        "solref": "0.02 1",
+        "solimp": "0.9 0.95 0.001",
+        "condim": "3"
+      },
+      "worldbody_bodies": [
+        {
+          "name": "arm_base",
+          "parent": "<worldbody>",
+          "depth": 0,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "quat": null
+        },
+        {
+          "name": "link1-2",
+          "parent": "arm_base",
+          "depth": 1,
+          "pos": [
+            0.0,
+            0.0,
+            0.0615
+          ],
+          "quat": null
+        },
+        {
+          "name": "link2-3",
+          "parent": "link1-2",
+          "depth": 2,
+          "pos": [
+            0.02,
+            0.0,
+            0.0385
+          ],
+          "quat": null
+        },
+        {
+          "name": "link3-4",
+          "parent": "link2-3",
+          "depth": 3,
+          "pos": [
+            -0.264,
+            0.0,
+            0.0
+          ],
+          "quat": null
+        },
+        {
+          "name": "link4-5",
+          "parent": "link3-4",
+          "depth": 4,
+          "pos": [
+            0.244004,
+            0.0,
+            0.059971
+          ],
+          "quat": null
+        },
+        {
+          "name": "link5-6",
+          "parent": "link4-5",
+          "depth": 5,
+          "pos": [
+            0.061868,
+            0.0,
+            0.0425
+          ],
+          "quat": null
+        },
+        {
+          "name": "link6-7",
+          "parent": "link5-6",
+          "depth": 6,
+          "pos": [
+            0.032,
+            0.0,
+            -0.0425
+          ],
+          "quat": null
+        },
+        {
+          "name": "finger_left",
+          "parent": "link6-7",
+          "depth": 7,
+          "pos": null,
+          "quat": null
+        },
+        {
+          "name": "finger_right",
+          "parent": "link6-7",
+          "depth": 7,
+          "pos": null,
+          "quat": null
+        }
+      ],
+      "joints": [
+        {
+          "name": "joint1",
+          "type": "hinge",
+          "body": "link1-2",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "range": [
+            -2.0944,
+            2.0944
+          ],
+          "actuatorfrcrange": [
+            -100.0,
+            100.0
+          ]
+        },
+        {
+          "name": "joint2",
+          "type": "hinge",
+          "body": "link2-3",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -3.14159,
+            0.01
+          ],
+          "actuatorfrcrange": [
+            -100.0,
+            100.0
+          ]
+        },
+        {
+          "name": "joint3",
+          "type": "hinge",
+          "body": "link3-4",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -0.01,
+            4.71239
+          ],
+          "actuatorfrcrange": [
+            -100.0,
+            100.0
+          ]
+        },
+        {
+          "name": "joint4",
+          "type": "hinge",
+          "body": "link4-5",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -1.95,
+            1.5708
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "joint5",
+          "type": "hinge",
+          "body": "link5-6",
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "range": [
+            -1.5708,
+            1.5708
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "joint6",
+          "type": "hinge",
+          "body": "link6-7",
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -3.14159,
+            3.14159
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "gripper_left",
+          "type": "slide",
+          "body": "finger_left",
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "range": [
+            -0.045,
+            0.001
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        },
+        {
+          "name": "gripper_right",
+          "type": "slide",
+          "body": "finger_right",
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range": [
+            -0.045,
+            0.001
+          ],
+          "actuatorfrcrange": [
+            -20.0,
+            20.0
+          ]
+        }
+      ],
+      "geoms": [
+        {
+          "name": "floor",
+          "body": "<worldbody>",
+          "type": "box",
+          "size": [
+            2.0,
+            2.0,
+            0.02
+          ],
+          "mesh": null,
+          "mesh_file_exists": null,
+          "rgba": [
+            0.68,
+            0.55,
+            0.42,
+            1.0
+          ],
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "arm_base",
+          "type": "mesh",
+          "size": null,
+          "mesh": "base_link",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link1-2",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link1-2",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link2-3",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link2-3",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link3-4",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link3-4",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link4-5",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link4-5",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link5-6",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link5-6",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "link6-7",
+          "type": "mesh",
+          "size": null,
+          "mesh": "link6-7",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "finger_left",
+          "type": "mesh",
+          "size": null,
+          "mesh": "finger_left",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        },
+        {
+          "name": null,
+          "body": "finger_right",
+          "type": "mesh",
+          "size": null,
+          "mesh": "finger_right",
+          "mesh_file_exists": true,
+          "rgba": null,
+          "mass": null,
+          "density": null,
+          "contype": null,
+          "conaffinity": null,
+          "friction": null
+        }
+      ],
+      "asset_meshes": [
+        {
+          "name": "base_link",
+          "file": "base_link.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/base_link.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link1-2",
+          "file": "link1-2.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link1-2.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link2-3",
+          "file": "link2-3.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link2-3.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link3-4",
+          "file": "link3-4.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link3-4.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link4-5",
+          "file": "link4-5.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link4-5.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link5-6",
+          "file": "link5-6.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link5-6.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "link6-7",
+          "file": "link6-7.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/link6-7.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "finger_left",
+          "file": "finger_left.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_left.stl",
+          "path_exists": true,
+          "scale": null
+        },
+        {
+          "name": "finger_right",
+          "file": "finger_right.stl",
+          "resolved_path": "/home/cjj/lerobot_vlbiman/lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/meshes/collision/finger_right.stl",
+          "path_exists": true,
+          "scale": null
+        }
+      ],
+      "actuators": [],
+      "cameras": [],
+      "lights": [
+        {
+          "name": "key_light",
+          "body": "<worldbody>",
+          "pos": [
+            1.5,
+            -1.0,
+            2.5
+          ],
+          "dir": [
+            -0.5,
+            0.3,
+            -1.0
+          ]
+        },
+        {
+          "name": "fill_light",
+          "body": "<worldbody>",
+          "pos": [
+            -1.0,
+            1.0,
+            1.8
+          ],
+          "dir": [
+            0.5,
+            -0.2,
+            -1.0
+          ]
+        }
+      ],
+      "summary": {
+        "body_count": 9,
+        "joint_count": 8,
+        "geom_count": 10,
+        "actuator_count": 0,
+        "camera_count": 0,
+        "light_count": 2,
+        "collision_disabled_geoms": [],
+        "mesh_geoms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "primitive_geoms": [
+          "floor"
+        ],
+        "mesh_assets_missing": [],
+        "freejoints": [],
+        "interaction_object_names": [
+          "floor"
+        ]
+      }
+    }
+  },
+  "mujoco_smoke": {
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.urdf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.urdf",
+      "status": "ok",
+      "nbody": 9,
+      "njnt": 8,
+      "ngeom": 9,
+      "nu": 0,
+      "ncam": 0,
+      "body_names": [
+        "world",
+        "link1-2",
+        "link2-3",
+        "link3-4",
+        "link4-5",
+        "link5-6",
+        "link6-7",
+        "finger_left",
+        "finger_right"
+      ],
+      "joint_names": [
+        "joint1",
+        "joint2",
+        "joint3",
+        "joint4",
+        "joint5",
+        "joint6",
+        "gripper_left",
+        "gripper_right"
+      ],
+      "geom_names": [
+        "<unnamed_0>",
+        "<unnamed_1>",
+        "<unnamed_2>",
+        "<unnamed_3>",
+        "<unnamed_4>",
+        "<unnamed_5>",
+        "<unnamed_6>",
+        "<unnamed_7>",
+        "<unnamed_8>"
+      ],
+      "actuator_names": [],
+      "camera_names": [],
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "qpos_abs_max": 0.6900497555652144,
+      "qvel_abs_max": 7.058702577478037,
+      "max_ncon_during_100_steps": 2,
+      "max_body_displacement_m": 0.1750685320856497,
+      "tracked_joint_qpos_initial": {
+        "joint1": 0.0,
+        "joint2": 0.0,
+        "joint3": 0.0,
+        "joint4": 0.0,
+        "joint5": 0.0,
+        "joint6": 0.0,
+        "gripper_left": 0.0,
+        "gripper_right": 0.0
+      },
+      "tracked_joint_qpos_final": {
+        "joint1": 0.0008740953179440723,
+        "joint2": -0.6900497555652144,
+        "joint3": -0.007459291410449537,
+        "joint4": 0.06938764313278159,
+        "joint5": -0.0029407089437829396,
+        "joint6": -0.0022193092903828775,
+        "gripper_left": -0.0004924400822910646,
+        "gripper_right": 0.0004979317952788288
+      }
+    },
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.urdf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.urdf",
+      "status": "ok",
+      "nbody": 9,
+      "njnt": 8,
+      "ngeom": 13,
+      "nu": 0,
+      "ncam": 0,
+      "body_names": [
+        "world",
+        "link1-2",
+        "link2-3",
+        "link3-4",
+        "link4-5",
+        "link5-6",
+        "link6-7",
+        "finger_left",
+        "finger_right"
+      ],
+      "joint_names": [
+        "joint1",
+        "joint2",
+        "joint3",
+        "joint4",
+        "joint5",
+        "joint6",
+        "gripper_left",
+        "gripper_right"
+      ],
+      "geom_names": [
+        "<unnamed_0>",
+        "<unnamed_1>",
+        "<unnamed_2>",
+        "<unnamed_3>",
+        "<unnamed_4>",
+        "<unnamed_5>",
+        "<unnamed_6>",
+        "<unnamed_7>",
+        "<unnamed_8>",
+        "<unnamed_9>",
+        "<unnamed_10>",
+        "<unnamed_11>",
+        "<unnamed_12>"
+      ],
+      "actuator_names": [],
+      "camera_names": [],
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "qpos_abs_max": 0.6900497555652154,
+      "qvel_abs_max": 7.058702577478065,
+      "max_ncon_during_100_steps": 2,
+      "max_body_displacement_m": 0.17506853208565,
+      "tracked_joint_qpos_initial": {
+        "joint1": 0.0,
+        "joint2": 0.0,
+        "joint3": 0.0,
+        "joint4": 0.0,
+        "joint5": 0.0,
+        "joint6": 0.0,
+        "gripper_left": 0.0,
+        "gripper_right": 0.0
+      },
+      "tracked_joint_qpos_final": {
+        "joint1": 0.0008740953179423954,
+        "joint2": -0.6900497555652154,
+        "joint3": -0.007459291410451388,
+        "joint4": 0.06938764313278876,
+        "joint5": -0.0029407089437832037,
+        "joint6": -0.0022193092903844227,
+        "gripper_left": -0.0004924400822907623,
+        "gripper_right": 0.0004979317952785232
+      }
+    },
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.mjcf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower.mjcf",
+      "status": "ok",
+      "nbody": 9,
+      "njnt": 8,
+      "ngeom": 9,
+      "nu": 0,
+      "ncam": 0,
+      "body_names": [
+        "world",
+        "link1-2",
+        "link2-3",
+        "link3-4",
+        "link4-5",
+        "link5-6",
+        "link6-7",
+        "finger_left",
+        "finger_right"
+      ],
+      "joint_names": [
+        "joint1",
+        "joint2",
+        "joint3",
+        "joint4",
+        "joint5",
+        "joint6",
+        "gripper_left",
+        "gripper_right"
+      ],
+      "geom_names": [
+        "<unnamed_0>",
+        "<unnamed_1>",
+        "<unnamed_2>",
+        "<unnamed_3>",
+        "<unnamed_4>",
+        "<unnamed_5>",
+        "<unnamed_6>",
+        "<unnamed_7>",
+        "<unnamed_8>"
+      ],
+      "actuator_names": [],
+      "camera_names": [],
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "qpos_abs_max": 0.6900497840794251,
+      "qvel_abs_max": 7.058702885448934,
+      "max_ncon_during_100_steps": 2,
+      "max_body_displacement_m": 0.17506853903414812,
+      "tracked_joint_qpos_initial": {
+        "joint1": 0.0,
+        "joint2": 0.0,
+        "joint3": 0.0,
+        "joint4": 0.0,
+        "joint5": 0.0,
+        "joint6": 0.0,
+        "gripper_left": 0.0,
+        "gripper_right": 0.0
+      },
+      "tracked_joint_qpos_final": {
+        "joint1": 0.0008740953210978013,
+        "joint2": -0.6900497840794251,
+        "joint3": -0.007459291524601414,
+        "joint4": 0.06938764470619746,
+        "joint5": -0.0029407089707750135,
+        "joint6": -0.0022193095368974883,
+        "gripper_left": -0.0004924400908927338,
+        "gripper_right": 0.0004979318039677054
+      }
+    },
+    "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf": {
+      "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf",
+      "status": "ok",
+      "nbody": 10,
+      "njnt": 8,
+      "ngeom": 10,
+      "nu": 0,
+      "ncam": 0,
+      "body_names": [
+        "world",
+        "arm_base",
+        "link1-2",
+        "link2-3",
+        "link3-4",
+        "link4-5",
+        "link5-6",
+        "link6-7",
+        "finger_left",
+        "finger_right"
+      ],
+      "joint_names": [
+        "joint1",
+        "joint2",
+        "joint3",
+        "joint4",
+        "joint5",
+        "joint6",
+        "gripper_left",
+        "gripper_right"
+      ],
+      "geom_names": [
+        "floor",
+        "<unnamed_1>",
+        "<unnamed_2>",
+        "<unnamed_3>",
+        "<unnamed_4>",
+        "<unnamed_5>",
+        "<unnamed_6>",
+        "<unnamed_7>",
+        "<unnamed_8>",
+        "<unnamed_9>"
+      ],
+      "actuator_names": [],
+      "camera_names": [],
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "qpos_abs_max": 0.68296207508887,
+      "qvel_abs_max": 7.059505259466522,
+      "max_ncon_during_100_steps": 2,
+      "max_body_displacement_m": 0.1768183295618778,
+      "tracked_joint_qpos_initial": {
+        "joint1": 0.0,
+        "joint2": 0.0,
+        "joint3": 0.0,
+        "joint4": 0.0,
+        "joint5": 0.0,
+        "joint6": 0.0,
+        "gripper_left": 0.0,
+        "gripper_right": 0.0
+      },
+      "tracked_joint_qpos_final": {
+        "joint1": 0.0008649592586703243,
+        "joint2": -0.68296207508887,
+        "joint3": -0.007375530867692431,
+        "joint4": 0.06898662826886841,
+        "joint5": -0.0030244914911067423,
+        "joint6": -0.0022340687711623996,
+        "gripper_left": -0.0005008596187243109,
+        "gripper_right": 0.0005060048876616883
+      }
+    }
+  },
+  "cube_contact_test": {
+    "path": "lerobot_robot_cjjarm/lerobot_robot_cjjarm/cjjarm_urdf/TRLC-DK1-Follower-home.mjcf",
+    "status": "ok",
+    "max_ncon": 7,
+    "cube_contact_steps": 101,
+    "unique_contact_pairs": [
+      [
+        "audit_cube_geom",
+        "floor"
+      ],
+      [
+        "audit_cube_geom",
+        "link4-5:geom_5"
+      ],
+      [
+        "audit_cube_geom",
+        "link6-7:geom_7"
+      ]
+    ],
+    "final_cube_qpos": [
+      0.3543103009187253,
+      0.008268729880219,
+      0.0062401153969231585,
+      -0.9959151743499157,
+      -0.00839994106683771,
+      -0.07233508949721741,
+      -0.0533857782286709
+    ],
+    "final_cube_center_z_m": 0.0062401153969231585,
+    "cube_passed_below_floor_top": false,
+    "robot_contact_pairs": [
+      [
+        "audit_cube_geom",
+        "link4-5:geom_5"
+      ],
+      [
+        "audit_cube_geom",
+        "link6-7:geom_7"
+      ]
+    ]
+  },
+  "cjjarm_sim_runtime": {
+    "status": "ok",
+    "default_scene_profile": "dual_camera_target",
+    "default_model": {
+      "nu": 0,
+      "ncam": 2,
+      "ngeom": 13,
+      "nbody": 13,
+      "has_virtual_target_freejoint": true,
+      "camera_names": [
+        "cjjarm_wrist",
+        "gemini335_external"
+      ]
+    },
+    "legacy_model": {
+      "scene_profile": "legacy",
+      "nu": 0,
+      "ncam": 0,
+      "ngeom": 9,
+      "nbody": 9,
+      "camera_names": []
+    },
+    "gripper_qpos_change_without_actuator": {
+      "left_before": 0.0,
+      "left_after": -0.019612365158638873,
+      "changed": true,
+      "contact_counts_during_close": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "has_bus_attribute_default": false,
+    "has_bus_attribute_legacy": false
+  },
+  "robot_env_probe": {
+    "status": "error",
+    "error_type": "RuntimeError",
+    "error": "operator torchvision::nms does not exist",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/cjj/lerobot_vlbiman/tools/audit/run_simulation_audit.py\", line 787, in robot_env_probe\n    from lerobot.rl.gym_manipulator import RobotEnv\n  File \"/home/cjj/lerobot_vlbiman/src/lerobot/rl/gym_manipulator.py\", line 28, in <module>\n    from lerobot.datasets.lerobot_dataset import LeRobotDataset\n  File \"/home/cjj/lerobot_vlbiman/src/lerobot/datasets/lerobot_dataset.py\", line 35, in <module>\n    from lerobot.datasets.compute_stats import aggregate_stats, compute_episode_stats\n  File \"/home/cjj/lerobot_vlbiman/src/lerobot/datasets/compute_stats.py\", line 18, in <module>\n    from lerobot.datasets.utils import load_image_as_numpy\n  File \"/home/cjj/lerobot_vlbiman/src/lerobot/datasets/utils.py\", line 38, in <module>\n    from torchvision import transforms\n  File \"/home/cjj/miniconda3/envs/lerobot/lib/python3.10/site-packages/torchvision/__init__.py\", line 10, in <module>\n    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip\n  File \"/home/cjj/miniconda3/envs/lerobot/lib/python3.10/site-packages/torchvision/_meta_registrations.py\", line 164, in <module>\n    def meta_nms(dets, scores, iou_threshold):\n  File \"/home/cjj/.local/lib/python3.10/site-packages/torch/library.py\", line 1087, in register\n    use_lib._register_fake(\n  File \"/home/cjj/.local/lib/python3.10/site-packages/torch/library.py\", line 204, in _register_fake\n    handle = entry.fake_impl.register(\n  File \"/home/cjj/.local/lib/python3.10/site-packages/torch/_library/fake_impl.py\", line 50, in register\n    if torch._C._dispatch_has_kernel_for_dispatch_key(self.qualname, \"Meta\"):\nRuntimeError: operator torchvision::nms does not exist\n"
+  }
+}

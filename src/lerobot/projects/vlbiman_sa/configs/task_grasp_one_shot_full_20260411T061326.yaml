@@ -1,0 +1,27 @@
+task_name: single_arm_simple_grasp
+fps: 10
+data_root: outputs/vlbiman_sa
+transforms_path: src/lerobot/projects/vlbiman_sa/configs/transforms.yaml
+handeye_result_path: outputs/vlbiman_sa/calib/handeye_result.json
+recording_session_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260411T061326
+skill_output_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260411T061326/analysis/t3_skill_bank
+skill_bank_path: outputs/vlbiman_sa/recordings/one_shot_full_20260411T061326/analysis/t3_skill_bank/skill_bank.json
+vision_output_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260411T061326/analysis/t4_vision
+pose_output_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260411T061326/analysis/t5_pose
+trajectory_output_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260411T061326/analysis/t6_trajectory
+live_result_path: outputs/vlbiman_sa/live_orange_pose/latest_result.json
+intrinsics_path: src/lerobot/projects/vlbiman_sa/configs/camera_intrinsics.json
+task_prompt: orange
+target_phrase: orange
+align_target_orientation: false
+primary_orientation_policy: preserve_tilt
+primary_reference_phrase: orange
+primary_vision_dir_name: t4_vision
+secondary_target_phrase: pink cup
+secondary_align_target_orientation: false
+secondary_orientation_policy: preserve_tilt
+secondary_reference_phrase: pink cup
+secondary_vision_dir_name: t4_vision_pink_cup
+camera_serial_number: null
+robot_type: cjjarm
+dry_run: true

@@ -1,0 +1,31 @@
+session_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260327T231705
+skill_bank_path: outputs/vlbiman_sa/recordings/one_shot_full_20260327T231705/analysis/t3_skill_bank/skill_bank.json
+output_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260327T231705/analysis/t4_vision_pink_tray
+intrinsics_path: src/lerobot/projects/vlbiman_sa/configs/camera_intrinsics.json
+target_phrase: pink tray
+task_prompt: pink tray
+frame_stride: 1
+use_var_segments_only: false
+
+segmentor:
+  florence_model_id: microsoft/Florence-2-base
+  sam2_model_id: facebook/sam2-hiera-small
+  task_prompt: <CAPTION_TO_PHRASE_GROUNDING>
+  local_files_only: true
+  max_new_tokens: 256
+  num_beams: 3
+  seed_search_stride: 20
+  max_seed_frames: 8
+  mask_threshold: 0.0
+  jpeg_quality: 95
+  offload_video_to_cpu: true
+  offload_state_to_cpu: true
+
+tracker:
+  stability_window_size: 5
+  position_variance_threshold_mm2: 100.0
+  orientation_variance_threshold_deg2: 225.0
+
+anchor:
+  depth_window: 7
+  contact_strategy: centroid

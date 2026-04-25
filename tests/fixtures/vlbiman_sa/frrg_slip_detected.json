@@ -1,0 +1,42 @@
+{
+  "timestamp": 5.0,
+  "phase": "LIFT_TEST",
+  "mode": "mock",
+  "retry_count": 0,
+  "stable_count": 5,
+  "phase_elapsed_s": 0.35,
+  "ee_pose_base": {
+    "xyz": [0.44, 0.0, 0.135],
+    "rpy": [0.0, 0.0, 0.0]
+  },
+  "object_pose_base": {
+    "xyz": [0.44, 0.0, 0.12],
+    "rpy": [0.0, 0.0, 0.0]
+  },
+  "gripper_width": 0.026,
+  "gripper_cmd": 0.026,
+  "gripper_current_proxy": 0.34,
+  "vision_conf": 0.93,
+  "target_visible": true,
+  "corridor_center_px": [320.0, 240.0],
+  "object_center_px": [320.0, 240.0],
+  "object_axis_angle": 0.01,
+  "object_proj_width_px": 86.0,
+  "object_proj_height_px": 120.0,
+  "e_dep": 0.0,
+  "e_lat": 0.0005,
+  "e_vert": 0.0,
+  "e_ang": 0.01,
+  "e_sym": 0.02,
+  "occ_corridor": 0.88,
+  "drift_obj": 0.0065,
+  "object_lift_m": 0.01,
+  "capture_score": 0.0,
+  "hold_score": 0.0,
+  "lift_score": 0.0,
+  "feature_debug_terms": {
+    "lateral_error_unit": "m",
+    "drift_unit": "m",
+    "object_width_px": 86.0
+  }
+}

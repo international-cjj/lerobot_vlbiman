@@ -1,0 +1,39 @@
+recording:
+  task_name: one_shot_demo
+  fps: 10
+  control_rate_hz: 30.0
+  duration_s: 60.0
+  max_frames: null
+  output_root: outputs/vlbiman_sa/recordings
+  run_name: null
+  camera_timeout_ms: 500
+  max_time_skew_ms: 50.0
+  max_consecutive_failures: 5
+  overwrite: false
+
+camera:
+  backend: gemini335l
+  serial_number_or_name: null
+  width: 1280
+  height: 800
+  fps: 30
+  color_mode: rgb
+  align_depth_to_color: true
+  align_mode: sw
+  profile_selection_strategy: closest
+  depth_work_mode: null
+  disp_search_range_mode: 2
+  disp_search_offset: null
+
+robot:
+  type: cjjarm
+  serial_port: null
+  disable_robot_cameras: true
+
+teleop:
+  type: zhonglin_teleop
+  port: null
+  baudrate: 115200
+  timeout: 0.1
+  command_delay_s: 0.01
+  calibrate_on_connect: true

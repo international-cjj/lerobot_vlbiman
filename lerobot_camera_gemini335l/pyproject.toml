@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lerobot_camera_gemini335l"
+version = "0.1.0"
+description = "LeRobot third-party camera plugin for Orbbec Gemini 335L"
+requires-python = ">=3.10"
+dependencies = [
+  "lerobot",
+  "numpy",
+  "opencv-python-headless",
+]
+
+[project.scripts]
+lerobot-gemini335l-smoke = "lerobot_camera_gemini335l.smoke_test:main"
+lerobot-gemini335l-depth-viewer = "lerobot_camera_gemini335l.depth_viewer:main"
+lerobot-gemini335l-list-profiles = "lerobot_camera_gemini335l.list_profiles:main"
+lerobot-gemini335l-stream-viewer = "lerobot_camera_gemini335l.stream_viewer:main"
+lerobot-gemini335l-diagnose-depth = "lerobot_camera_gemini335l.diagnose_depth_startup:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lerobot_camera_gemini335l*"]

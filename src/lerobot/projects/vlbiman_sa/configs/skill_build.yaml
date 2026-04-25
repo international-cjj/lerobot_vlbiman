@@ -1,0 +1,22 @@
+session_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260327T231705
+output_dir: outputs/vlbiman_sa/recordings/one_shot_full_20260327T231705/analysis/t3_skill_bank
+
+segmenter:
+  min_segment_frames: 6
+  max_segments: 12
+  velocity_quantile: 0.68
+  acceleration_quantile: 0.78
+  transition_quantile: 0.76
+  gripper_delta_threshold: 0.08
+  merge_gap_frames: 3
+  transition_smoothing_window: 5
+  merge_same_label_segments: true
+  merge_short_bridge_segments: true
+  short_segment_merge_frames: 12
+  mergeable_labels: [transfer, approach, retreat, stabilize]
+
+classifier:
+  scene_rgb_delta_threshold: 12.0
+  scene_depth_delta_threshold_m: 0.01
+  gripper_span_threshold: 0.08
+  var_score_threshold: 0.45

@@ -1,0 +1,48 @@
+mode: eye_to_hand
+
+camera:
+  backend: gemini335l
+  serial_number_or_name: CP3F5420000Z
+  width: 1280
+  height: 800
+  fps: 30
+  color_mode: rgb
+  align_depth_to_color: true
+  align_mode: sw
+  profile_selection_strategy: closest
+  disp_search_range_mode: 2
+  opencv_index_or_path: /dev/video0
+
+robot:
+  type: cjjarm
+  serial_port: /dev/ttyACM0
+  disable_robot_cameras: true
+
+intrinsics:
+  path: src/lerobot/projects/vlbiman_sa/configs/camera_intrinsics.json
+
+board:
+  type: chessboard
+  cols: 5
+  rows: 4
+  square_size_m: 0.01
+  detector: sb_fallback
+  refine_corners: true
+
+sampling:
+  min_samples: 10
+  max_samples: 40
+  loop_hz: 20
+  translation_step_m: 0.005
+  rotation_step_rad: 0.05
+
+validation:
+  max_translation_mm: 2.0
+  max_rotation_deg: 1.0
+
+output:
+  samples_json: outputs/vlbiman_sa/calib/handeye_samples.json
+  result_json: outputs/vlbiman_sa/calib/handeye_result.json
+  transforms_yaml: src/lerobot/projects/vlbiman_sa/configs/transforms.yaml
+  save_debug_images: true
+  debug_dir: outputs/vlbiman_sa/calib/debug_frames

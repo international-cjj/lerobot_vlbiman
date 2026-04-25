@@ -1,0 +1,33 @@
+hardware:
+  camera_serial_number: null
+  robot_serial_port: null
+  teleop_port: null
+
+stages:
+  handeye:
+    enabled: false
+    config: src/lerobot/projects/vlbiman_sa/configs/handeye_auto.yaml
+
+  record:
+    enabled: true
+    config: src/lerobot/projects/vlbiman_sa/configs/one_shot_record.yaml
+    duration_s: 60.0
+    control_rate_hz: 30.0
+    max_frames: null
+    no_teleop_calibrate: false
+    camera_serial_number: null
+    robot_serial_port: null
+    teleop_port: null
+
+  skill_build:
+    enabled: false
+    config: src/lerobot/projects/vlbiman_sa/configs/skill_build.yaml
+
+  vision:
+    enabled: false
+    config: src/lerobot/projects/vlbiman_sa/configs/vision_analysis.yaml
+
+  grasp:
+    enabled: false
+    config: src/lerobot/projects/vlbiman_sa/configs/task_grasp.yaml
+    dry_run: true
