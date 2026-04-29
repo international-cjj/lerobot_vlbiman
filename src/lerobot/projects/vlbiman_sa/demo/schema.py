@@ -20,6 +20,7 @@ class RecorderConfig:
     camera_timeout_ms: int = 500
     max_time_skew_ms: float = 50.0
     max_consecutive_failures: int = 5
+    wait_for_start_space: bool = False
     overwrite: bool = False
 
     def validate(self) -> None:

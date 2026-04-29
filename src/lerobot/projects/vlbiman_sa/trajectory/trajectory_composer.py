@@ -117,6 +117,7 @@ class TrajectoryComposer:
         segment_planning_modes: dict[str, str] = {}
         segment_fusion_diagnostics: dict[str, dict[str, Any]] = {}
         segment_target_objects_summary: dict[str, str | None] = {}
+        skipped_visual_servo_segments: list[dict[str, Any]] = []
 
         for segment in skill_bank.segments:
             segment_records = records_by_segment.get(str(segment.segment_id), [])
@@ -135,6 +136,33 @@ class TrajectoryComposer:
                 else None
             )
             segment_semantic_state = _segment_semantic_state(segment)
+
+            if _is_visual_servo_segment(segment):
+                segment_planning_modes[str(segment.segment_id)] = "online_visual_servo_skipped"
+                target_phrase = _segment_metric_string(segment, "target_phrase") or target_phrase
+                target_frame = _segment_metric_int(segment, "target_frame")
+                target_frame = int(target_frame) if target_frame is not None else int(segment.representative_frame)
+                diagnostic = {
+                    "planning_mode": "online_visual_servo_skipped",
+                    "frame_count": len(segment_records),
+                    "start_frame": int(segment.start_frame),
+                    "end_frame": int(segment.end_frame),
+                    "target_phrase": target_phrase,
+                    "target_frame": target_frame,
+                    "reason": "segment_reserved_for_real_time_visual_servo",
+                }
+                segment_fusion_diagnostics[str(segment.segment_id)] = diagnostic
+                segment_target_objects_summary[str(segment.segment_id)] = target_object_key or target_phrase
+                skipped_visual_servo_segments.append(
+                    {
+                        "segment_id": str(segment.segment_id),
+                        "label": str(segment.label),
+                        "semantic_state": segment_semantic_state,
+                        "target_phrase": target_phrase,
+                        "target_frame": target_frame,
+                    }
+                )
+                continue
 
             if _is_locked_gripper_segment(segment):
                 segment_planning_modes[str(segment.segment_id)] = "hold_arm_gripper_only"
@@ -322,6 +350,8 @@ class TrajectoryComposer:
             },
             "segment_planning_modes": segment_planning_modes,
             "segment_fusion_diagnostics": segment_fusion_diagnostics,
+            "skipped_visual_servo_segments": skipped_visual_servo_segments,
+            "skipped_visual_servo_segment_count": len(skipped_visual_servo_segments),
             "continuity_requested": continuity_requested,
             "continuity_start_joint_positions": seed_q.astype(float).tolist() if continuity_requested else None,
             "continuity_start_was_clipped": bool(continuity_clipped) if continuity_requested else False,
@@ -700,6 +730,41 @@ def _segment_semantic_state(segment: Any) -> str | None:
     if value is None:
         return None
     return str(value)
+
+
+def _normalized_segment_semantic_state(segment: Any) -> str:
+    return str(_segment_semantic_state(segment) or "").strip().lower().replace("-", "_")
+
+
+def _segment_metric_string(segment: Any, key: str) -> str | None:
+    metrics = getattr(segment, "metrics", None)
+    if not isinstance(metrics, dict):
+        return None
+    value = metrics.get(key)
+    if value is None:
+        return None
+    text = str(value).strip()
+    return text or None
+
+
+def _segment_metric_int(segment: Any, key: str) -> int | None:
+    metrics = getattr(segment, "metrics", None)
+    if not isinstance(metrics, dict):
+        return None
+    value = metrics.get(key)
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _is_visual_servo_segment(segment: Any) -> bool:
+    semantic_state = _normalized_segment_semantic_state(segment)
+    if semantic_state == "visual_servo":
+        return True
+    return str(getattr(segment, "label", "")).strip().lower().replace("-", "_") == "visual_servo"
 
 
 def _is_locked_gripper_segment(segment: Any) -> bool:

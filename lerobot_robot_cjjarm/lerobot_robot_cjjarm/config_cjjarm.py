@@ -1,14 +1,16 @@
 # uploaded: lerobot_robot_cjjarm/config_cjjarm.py
 
-from dataclasses import dataclass, field
 import glob
+import os
+from dataclasses import dataclass, field
 from pathlib import Path
-from lerobot.robots.config import RobotConfig
-from lerobot.cameras import CameraConfig
-from lerobot.cameras.opencv import OpenCVCameraConfig
-from .DM_CAN import DM_Motor_Type
 
+from lerobot.cameras import CameraConfig
 from lerobot.cameras.configs import ColorMode
+from lerobot.cameras.opencv import OpenCVCameraConfig
+from lerobot.robots.config import RobotConfig
+
+from .DM_CAN import DM_Motor_Type
 
 
 def _auto_detect_serial_port(pattern: str, device_name: str) -> str:
@@ -41,6 +43,101 @@ def _auto_detect_serial_port(pattern: str, device_name: str) -> str:
 def _default_urdf_path() -> str:
     base_dir = Path(__file__).resolve().parent
     return str(base_dir / "cjjarm_urdf" / "TRLC-DK1-Follower.urdf")
+
+
+def _coerce_camera_index_or_path(value: str | int | Path) -> str | int | Path:
+    if isinstance(value, int | Path):
+        return value
+    stripped = str(value).strip()
+    if stripped.isdecimal():
+        return int(stripped)
+    return stripped
+
+
+def _auto_detect_dabaidcw_rgb_path() -> str | None:
+    by_id_dir = Path("/dev/v4l/by-id")
+    if not by_id_dir.exists():
+        return None
+
+    tokens = ("dabai", "da-bai", "da_bai", "dcw")
+    for entry in sorted(by_id_dir.iterdir(), key=lambda item: item.name):
+        name = entry.name.lower()
+        if any(token in name for token in tokens):
+            return str(entry)
+    return None
+
+
+def _default_dabaidcw_index_or_path() -> str | int | Path:
+    for env_name in (
+        "LEROBOT_DABAIDCW_RGB_INDEX_OR_PATH",
+        "LEROBOT_DABAIDCW_RGB",
+        "LEROBOT_WRIST_RGB_INDEX_OR_PATH",
+    ):
+        value = os.environ.get(env_name)
+        if value:
+            return _coerce_camera_index_or_path(value)
+
+    detected_path = _auto_detect_dabaidcw_rgb_path()
+    if detected_path is not None:
+        return detected_path
+
+    return 2
+
+
+def dabaidcw_rgb_camera_config(
+    *,
+    index_or_path: str | int | Path | None = None,
+    width: int = 1920,
+    height: int = 1080,
+    fps: int = 30,
+    fourcc: str | None = "MJPG",
+) -> OpenCVCameraConfig:
+    """DaBai DCW RGB-only wrist camera over OpenCV/V4L2 UVC, without Orbbec SDK."""
+
+    if index_or_path is None:
+        resolved_index_or_path = _default_dabaidcw_index_or_path()
+    else:
+        resolved_index_or_path = _coerce_camera_index_or_path(index_or_path)
+    return OpenCVCameraConfig(
+        index_or_path=resolved_index_or_path,
+        fps=fps,
+        width=width,
+        height=height,
+        color_mode=ColorMode.RGB,
+        fourcc=fourcc,
+    )
+
+
+def wrist_rgb_camera_config(
+    *,
+    index_or_path: str | int | Path | None = None,
+    width: int = 1920,
+    height: int = 1080,
+    fps: int = 30,
+    fourcc: str | None = "MJPG",
+) -> OpenCVCameraConfig:
+    return dabaidcw_rgb_camera_config(
+        index_or_path=index_or_path,
+        width=width,
+        height=height,
+        fps=fps,
+        fourcc=fourcc,
+    )
+
+
+def default_cjjarm_cameras_config() -> dict[str, CameraConfig]:
+    return {
+        # 上帝视角相机 (例如笔记本自带或顶部USB相机)
+        "laptop": OpenCVCameraConfig(
+            index_or_path="/dev/video0",  # 替换为你实际的相机ID
+            fps=30,
+            width=640,
+            height=480,
+            color_mode=ColorMode.RGB,
+        ),
+        # DaBai DCW 手腕 RGB 相机：普通 UVC/OpenCV 输入，只读 RGB，不启用 depth/点云/对齐。
+        "wrist": wrist_rgb_camera_config(),
+    }
 
 
 @RobotConfig.register_subclass("cjjarm")
@@ -94,6 +191,7 @@ class CjjArmConfig(RobotConfig):
     
     default_max_step: float = 1
     default_smooth_factor: float = 1
+    default_arm_velocity: float = 5.0
 
     per_joint_smooth_factor: dict[str, float] = field(
         default_factory=lambda: {
@@ -107,23 +205,4 @@ class CjjArmConfig(RobotConfig):
     use_velocity: bool = True
     use_acceleration: bool = False
     
-    cameras: dict[str, CameraConfig] = field(
-        default_factory=lambda: {
-            # 上帝视角相机 (例如笔记本自带或顶部USB相机)
-            "laptop": OpenCVCameraConfig(
-                index_or_path="/dev/video0",  # 替换为你实际的相机ID
-                fps=30,
-                width=640,
-                height=480,
-                color_mode=ColorMode.RGB
-            ),
-            # 机械臂手腕相机
-            "wrist": OpenCVCameraConfig(
-                index_or_path="/dev/video2",  # 替换为你实际的相机ID
-                fps=30,
-                width=640,
-                height=480,
-                color_mode=ColorMode.RGB
-            )
-        }
-    )
+    cameras: dict[str, CameraConfig] = field(default_factory=default_cjjarm_cameras_config)

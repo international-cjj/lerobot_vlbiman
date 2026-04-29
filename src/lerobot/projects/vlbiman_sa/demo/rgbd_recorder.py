@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import sys
 import threading
 import time
 from contextlib import ExitStack
@@ -10,7 +11,7 @@ from typing import Any, Protocol
 
 import numpy as np
 
-from .io import append_frame_metadata, create_session_dir, save_frame_assets, write_manifest
+from .io import append_frame_metadata, create_session_dir, save_frame_assets, save_named_camera_assets, write_manifest
 from .schema import FrameRecord, RecorderConfig, RecordingSummary
 
 logger = logging.getLogger(__name__)
@@ -170,6 +171,10 @@ class RGBDRecorder:
             if self.teleop is not None and _connect_if_needed(self.teleop):
                 stack.callback(_disconnect_quietly, self.teleop)
 
+            if self.config.wait_for_start_space:
+                _wait_for_start_space()
+
+            started_at_ns = time.time_ns()
             control_loop: _TeleopControlLoop | None = None
             if self.teleop is not None and self.config.control_rate_hz > float(self.config.fps):
                 control_loop = _TeleopControlLoop(
@@ -233,6 +238,7 @@ class RGBDRecorder:
                         first_capture_started_ns = capture_started_ns
                     last_capture_ended_ns = capture_ended_ns
 
+                    image_observations = _extract_rgb_image_observations(robot_observation)
                     numeric_observation = _extract_numeric_observation(robot_observation)
                     joint_positions = _extract_joint_positions(numeric_observation)
                     gripper_state = _extract_gripper_state(numeric_observation)
@@ -260,6 +266,13 @@ class RGBDRecorder:
                         ee_pose=ee_pose,
                     )
                     frame = save_frame_assets(session_dir, frame, color_rgb=color_rgb, depth_map=depth_map)
+                    for camera_name, camera_rgb in image_observations.items():
+                        frame = save_named_camera_assets(
+                            session_dir,
+                            frame,
+                            camera_name=camera_name,
+                            color_rgb=camera_rgb,
+                        )
                     append_frame_metadata(metadata_path, frame)
 
                     recorded_frames += 1
@@ -362,6 +375,37 @@ def _disconnect_quietly(node: Any) -> None:
         logger.exception("Failed to disconnect %s cleanly.", node)
 
 
+def _wait_for_start_space() -> None:
+    if not sys.stdin.isatty():
+        try:
+            input("Initialization complete. Press Enter to start recording...")
+        except EOFError:
+            logger.warning("Standard input is not interactive; starting recording immediately.")
+        return
+
+    try:
+        import termios
+        import tty
+    except ImportError:
+        input("Initialization complete. Press Enter to start recording...")
+        return
+
+    print("Initialization complete. Press Space to start recording...", flush=True)
+    fd = sys.stdin.fileno()
+    old_attrs = termios.tcgetattr(fd)
+    try:
+        tty.setcbreak(fd)
+        while True:
+            char = sys.stdin.read(1)
+            if char == " ":
+                print("Recording started.", flush=True)
+                return
+            if char in {"\x03", "\x04"}:
+                raise KeyboardInterrupt
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_attrs)
+
+
 def _extract_numeric_observation(observation: dict[str, Any]) -> dict[str, float]:
     numeric: dict[str, float] = {}
     for key, value in observation.items():
@@ -370,6 +414,21 @@ def _extract_numeric_observation(observation: dict[str, Any]) -> dict[str, float
         if np.isscalar(value):
             numeric[str(key)] = float(value)
     return numeric
+
+
+def _extract_rgb_image_observations(observation: dict[str, Any]) -> dict[str, np.ndarray]:
+    images: dict[str, np.ndarray] = {}
+    for key, value in observation.items():
+        if isinstance(value, (str, bytes)):
+            continue
+        try:
+            image = np.asarray(value)
+        except Exception:
+            continue
+        if image.ndim != 3 or image.shape[2] != 3:
+            continue
+        images[str(key)] = image
+    return images
 
 
 def _extract_joint_positions(observation: dict[str, float]) -> dict[str, float]:

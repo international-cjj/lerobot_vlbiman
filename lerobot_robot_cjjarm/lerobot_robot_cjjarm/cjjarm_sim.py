@@ -551,6 +551,19 @@ class CjjArmSim(Robot):
             dtype=float,
         )
 
+    def _extract_delta_frame(self, action: dict[str, Any]) -> str:
+        frame = str(
+            action.get(
+                "delta_frame",
+                action.get("pose_delta_frame", action.get("reference_frame", "world")),
+            )
+        ).strip().lower()
+        if frame in {"world", "base", "base_link"}:
+            return "world"
+        if frame in {"tool", "tool0", "ee", "end_effector", "end-effector"}:
+            return "tool"
+        raise ValueError(f"Unsupported delta_frame '{frame}'. Expected 'world' or 'tool'.")
+
     def connect(self, calibrate: bool = True) -> None:
         if self.is_connected:
             raise DeviceAlreadyConnectedError(f"{self} already connected")
@@ -721,7 +734,13 @@ class CjjArmSim(Robot):
                 if self._target_pose is None:
                     self._target_pose = self.kinematics.compute_fk(seed)
                 base_target_pose = np.asarray(self._target_pose, dtype=float)
-                pose_action = compose_pose_delta(base_target_pose, delta_action, rotation_frame="world")
+                delta_frame = self._extract_delta_frame(action)
+                pose_action = compose_pose_delta(
+                    base_target_pose,
+                    delta_action,
+                    rotation_frame=delta_frame,
+                    translation_frame=delta_frame,
+                )
 
         if pose_action is not None:
             if self.kinematics is None:

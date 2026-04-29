@@ -1,0 +1,117 @@
+target:
+  phrase: "yellow ball"
+  target_frame_path: null
+  target_mask_path: null
+  target_state_path: null
+
+data:
+  original_flow_dir: "/home/cjj/lerobot_vlbiman/outputs/vlbiman_sa/original_flow/pure_sim_original_20260427T072327Z"
+  camera: "wrist"
+  camera_aliases:
+    - "wrist"
+    - "wrist_rgb"
+    - "dabaidcw_rgb"
+    - "hand"
+    - "hand_camera"
+    - "wrist_camera"
+  groundingdino_check_frame: 75
+  sam2_check_start_frame: 75
+  sam2_check_end_frame: 100
+  servo_validation_start_frame: 65
+  servo_validation_target_frame: 100
+
+detector:
+  type: "groundingdino"
+  repo_path: "/home/cjj/ViT-VS/GD_DINOv2_Sim/GroundingDINO"
+  config_path: "/home/cjj/ViT-VS/GD_DINOv2_Sim/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+  checkpoint_path: "/home/cjj/ViT-VS/GD_DINOv2_Sim/weights/groundingdino_swint_ogc.pth"
+  box_threshold: 0.30
+  text_threshold: 0.25
+  device: "cuda"
+  max_reinit: 3
+  validation_phrase: "yellow ball"
+
+sam2:
+  model_id: "facebook/sam2-hiera-small"
+  model_size: "small"
+  config_file: null
+  checkpoint_path: null
+  device: "cuda"
+  repo_path: "/home/cjj/lerobot_2026_1/third_party/sam2_official_20260324"
+  use_fp16: true
+  input_resize_width: 640
+  min_fps: 10.0
+  target_fps: 15.0
+  max_update_ms: 100
+  independent_live_tracker: true
+  forbid_disk_frame_io: true
+  local_files_only: true
+  offload_video_to_cpu: false
+  offload_state_to_cpu: false
+  async_loading_frames: false
+  mask_threshold: 0.0
+  jpeg_quality: 95
+  incremental_live_tracker: true
+  live_seed_with_previous_mask: true
+  validation_start_frame: 75
+  validation_end_frame: 100
+  validation_requires_all_masks: true
+
+servo:
+  k_u: 0.015
+  k_v: 0.015
+  k_a: 0.010
+  # CJJArm wrist-camera real run 20260428: image u moved the wrong way with +camera mapping.
+  # Translation is now executed in the tool frame; positive z approaches along the tool pointing line.
+  axis_sign_x: -1.0
+  axis_sign_y: -1.0
+  axis_sign_z: 1.0
+  max_step_xy_m: 0.006
+  max_step_z_m: 0.008
+  center_tol_u: 0.035
+  center_tol_v: 0.045
+  area_tol: 0.12
+  mask_iou_tol: 0.70
+  stable_frames: 5
+  max_steps: 120
+
+servo_validation:
+  enabled: true
+  backend: "sim"
+  start_frame: 65
+  target_frame: 100
+  phrase: "yellow ball"
+  target_mask_path: "outputs/vlbiman_sa/inv_rgb_servo/check_sam2_75_100/mask_000100.png"
+  start_scene_source: "original_flow"
+  scene_path: "outputs/vlbiman_sa/mujoco_dual_camera_scene/pure_sim_plate_ball/scene/dual_camera_target_scene.mjcf"
+  require_groundingdino: true
+  require_sam2: true
+  require_sim_execution: true
+  success_center_tol_u: 0.035
+  success_center_tol_v: 0.045
+  success_area_tol: 0.12
+  success_mask_iou: 0.70
+  stable_frames: 5
+  max_steps: 120
+
+safety:
+  min_area_ratio: 0.002
+  max_area_ratio: 0.60
+  max_bbox_jump_ratio: 0.25
+  max_area_jump_ratio: 0.40
+  max_lost_frames: 3
+  max_joint_step_rad: 0.08
+  pause_on_low_fps: true
+
+backend:
+  type: "robot"
+  camera: "wrist"
+  dry_run: false
+
+output:
+  output_dir: "outputs/vlbiman_sa/inv_rgb_servo/default"
+  save_overlay: true
+  save_every_n_frames: 5
+  groundingdino_check_dir: "outputs/vlbiman_sa/inv_rgb_servo/check_groundingdino_frame75"
+  sam2_check_dir: "outputs/vlbiman_sa/inv_rgb_servo/check_sam2_75_100"
+  servo_check_dir: "outputs/vlbiman_sa/inv_rgb_servo/check_servo_75_to_100"

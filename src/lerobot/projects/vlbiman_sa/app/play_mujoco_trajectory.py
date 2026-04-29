@@ -152,6 +152,23 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--frame-stride", type=int, default=1)
     parser.add_argument("--loop", action="store_true", default=True)
     parser.add_argument("--once", action="store_true")
+    parser.add_argument(
+        "--physics-replay",
+        action="store_true",
+        help="For --demo-session-dir, replay recorded actions through MuJoCo actuators and mj_step.",
+    )
+    parser.add_argument(
+        "--physics-action-source",
+        choices=("sent", "teleop"),
+        default="sent",
+        help="Recorded action field used by --physics-replay.",
+    )
+    parser.add_argument(
+        "--physics-substeps",
+        type=int,
+        default=20,
+        help="MuJoCo mj_step calls per recorded frame in --physics-replay; 20 matches CjjArmSim default.",
+    )
     parser.add_argument("--target-radius-m", type=float, default=0.022)
     parser.add_argument("--target-mass-kg", type=float, default=0.12)
     parser.add_argument(
@@ -359,6 +376,116 @@ def _set_robot_qpos(
         data.qpos[joint_qpos[joint_name]] = float(joint_positions[joint_idx])
 
 
+def _gripper_qpos_indices(model: mujoco.MjModel) -> list[int]:
+    addrs: list[int] = []
+    for joint_name in ("gripper_left", "gripper_right"):
+        joint_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, joint_name)
+        if joint_id >= 0:
+            addrs.append(int(model.jnt_qposadr[joint_id]))
+    return addrs
+
+
+def _set_gripper_qpos(data: mujoco.MjData, gripper_qpos: list[int], gripper_position: float | None) -> None:
+    if gripper_position is None:
+        return
+    for addr in gripper_qpos:
+        data.qpos[addr] = float(gripper_position)
+
+
+def _read_home_qpos(model: mujoco.MjModel) -> np.ndarray:
+    if model.nkey > 0:
+        qpos = np.asarray(model.key_qpos, dtype=float).reshape(int(model.nkey), int(model.nq))[0].copy()
+    else:
+        qpos = np.asarray(model.qpos0, dtype=float).copy()
+
+    qpos0 = np.asarray(model.qpos0, dtype=float)
+    for joint_id in range(int(model.njnt)):
+        if int(model.jnt_type[joint_id]) != int(mujoco.mjtJoint.mjJNT_FREE):
+            continue
+        qpos_addr = int(model.jnt_qposadr[joint_id])
+        key_position = qpos[qpos_addr : qpos_addr + 3]
+        authored_position = qpos0[qpos_addr : qpos_addr + 3]
+        if np.allclose(key_position, 0.0) and not np.allclose(authored_position, 0.0):
+            qpos[qpos_addr : qpos_addr + 7] = qpos0[qpos_addr : qpos_addr + 7]
+    return qpos
+
+
+def _read_home_ctrl(model: mujoco.MjModel) -> np.ndarray:
+    if model.nu <= 0:
+        return np.zeros(0, dtype=float)
+    if model.nkey > 0 and model.key_ctrl.size >= model.nu:
+        return np.asarray(model.key_ctrl, dtype=float).reshape(int(model.nkey), int(model.nu))[0].copy()
+    lower = np.asarray(model.actuator_ctrlrange[:, 0], dtype=float)
+    upper = np.asarray(model.actuator_ctrlrange[:, 1], dtype=float)
+    return 0.5 * (lower + upper)
+
+
+def _reset_physics_replay_state(model: mujoco.MjModel, data: mujoco.MjData) -> np.ndarray:
+    mujoco.mj_resetData(model, data)
+    data.qpos[:] = _read_home_qpos(model)
+    data.qvel[:] = 0.0
+    ctrl = _read_home_ctrl(model)
+    if model.nu > 0:
+        data.ctrl[:] = ctrl
+    mujoco.mj_forward(model, data)
+    return ctrl
+
+
+_ACTION_ACTUATOR_NAMES = {
+    "joint_1.pos": "act_joint1",
+    "joint_2.pos": "act_joint2",
+    "joint_3.pos": "act_joint3",
+    "joint_4.pos": "act_joint4",
+    "joint_5.pos": "act_joint5",
+    "joint_6.pos": "act_joint6",
+    "joint1.pos": "act_joint1",
+    "joint2.pos": "act_joint2",
+    "joint3.pos": "act_joint3",
+    "joint4.pos": "act_joint4",
+    "joint5.pos": "act_joint5",
+    "joint6.pos": "act_joint6",
+    "gripper_left.pos": "act_gripper_left",
+    "gripper_right.pos": "act_gripper_right",
+}
+
+
+def _actuator_id_by_name(model: mujoco.MjModel) -> dict[str, int]:
+    return {
+        str(model.actuator(actuator_id).name): int(actuator_id)
+        for actuator_id in range(int(model.nu))
+        if str(model.actuator(actuator_id).name)
+    }
+
+
+def _ctrl_from_recorded_action(
+    model: mujoco.MjModel,
+    actuator_ids: dict[str, int],
+    previous_ctrl: np.ndarray,
+    action: dict[str, Any],
+) -> np.ndarray:
+    ctrl = np.asarray(previous_ctrl, dtype=float).reshape(int(model.nu)).copy()
+    for action_key, actuator_name in _ACTION_ACTUATOR_NAMES.items():
+        if action_key not in action:
+            continue
+        actuator_id = actuator_ids.get(actuator_name)
+        if actuator_id is not None:
+            ctrl[actuator_id] = float(action[action_key])
+
+    if "gripper.pos" in action:
+        for actuator_name in ("act_gripper_left", "act_gripper_right"):
+            actuator_id = actuator_ids.get(actuator_name)
+            if actuator_id is not None:
+                ctrl[actuator_id] = float(action["gripper.pos"])
+
+    if model.nu > 0:
+        ctrl = np.clip(
+            ctrl,
+            np.asarray(model.actuator_ctrlrange[:, 0], dtype=float),
+            np.asarray(model.actuator_ctrlrange[:, 1], dtype=float),
+        )
+    return ctrl
+
+
 def _physical_object_config(object_key: str, position_xyz: np.ndarray) -> ScenePrimitiveObjectConfig:
     normalized = str(object_key).strip().lower().replace(" ", "_")
     position = tuple(float(value) for value in np.asarray(position_xyz, dtype=float).reshape(3))
@@ -446,9 +573,15 @@ def _load_demo_points(session_dir: Path) -> list[dict[str, Any]]:
     points: list[dict[str, Any]] = []
     for record in records:
         joint_positions = [float(record.joint_positions[key]) for key in joint_keys]
+        gripper_position = record.gripper_state.get("gripper.pos")
+        if gripper_position is None:
+            gripper_position = record.robot_observation.get("gripper.pos")
         points.append(
             {
                 "joint_positions": joint_positions,
+                "gripper_position": None if gripper_position is None else float(gripper_position),
+                "sent_action": dict(record.sent_action),
+                "teleop_action": dict(record.teleop_action),
                 "relative_time_s": float(record.relative_time_s),
                 "segment_id": "demo_sequence",
                 "segment_label": "demo_sequence",
@@ -598,6 +731,14 @@ def main() -> int:
     )
     data = mujoco.MjData(model)
     joint_qpos = _joint_qpos_indices(model)
+    gripper_qpos = _gripper_qpos_indices(model)
+    physics_replay = bool(args.physics_replay)
+    if physics_replay and args.demo_session_dir is None:
+        raise ValueError("--physics-replay requires --demo-session-dir.")
+    if physics_replay and model.nu <= 0:
+        raise ValueError("--physics-replay requires a MuJoCo model with actuators.")
+    actuator_ids = _actuator_id_by_name(model) if physics_replay else {}
+    physics_ctrl = _reset_physics_replay_state(model, data) if physics_replay else np.zeros(int(model.nu), dtype=float)
 
     step_duration = max(float(args.step_duration_s), 1e-3)
     loop_forever = not bool(args.once)
@@ -617,13 +758,31 @@ def main() -> int:
 
     try:
         while viewer.is_running():
+            if physics_replay:
+                physics_ctrl = _reset_physics_replay_state(model, data)
             for point in points:
                 if not viewer.is_running():
                     break
                 tick_start = time.perf_counter()
-                joint_positions = np.asarray(point["joint_positions"], dtype=float)
-                _set_robot_qpos(data, joint_qpos, joint_positions)
-                mujoco.mj_forward(model, data)
+                if physics_replay:
+                    action_key = "sent_action" if str(args.physics_action_source) == "sent" else "teleop_action"
+                    recorded_action = dict(point.get(action_key) or {})
+                    if not recorded_action:
+                        recorded_action = {
+                            f"joint_{joint_index + 1}.pos": float(value)
+                            for joint_index, value in enumerate(point["joint_positions"])
+                        }
+                        if point.get("gripper_position") is not None:
+                            recorded_action["gripper.pos"] = float(point["gripper_position"])
+                    physics_ctrl = _ctrl_from_recorded_action(model, actuator_ids, physics_ctrl, recorded_action)
+                    data.ctrl[:] = physics_ctrl
+                    for _ in range(max(int(args.physics_substeps), 1)):
+                        mujoco.mj_step(model, data)
+                else:
+                    joint_positions = np.asarray(point["joint_positions"], dtype=float)
+                    _set_robot_qpos(data, joint_qpos, joint_positions)
+                    _set_gripper_qpos(data, gripper_qpos, point.get("gripper_position"))
+                    mujoco.mj_forward(model, data)
                 _update_target_markers(
                     viewer,
                     object_positions,

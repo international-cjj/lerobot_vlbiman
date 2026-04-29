@@ -595,3 +595,1452 @@
  - type: N11libobsensor13pal_exceptionE
 [04/22 20:01:44.557116][info][3][DeviceManager.cpp:25] Current found device(s): (0)
 [04/22 20:01:44.557118][info][3][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:38:57.159826][info][220328][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/28 20:38:57.159900][info][220328][DeviceManager.cpp:25] Current found device(s): (1)
+[04/28 20:38:57.159923][info][220328][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:38:57.159932][info][220328][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:38:59.166281][info][220328][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/28 20:38:59.166349][info][220328][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:38:59.170157][info][220328][DeviceBase.cpp:651] key: HwType,value:L2
+[04/28 20:38:59.170219][info][220328][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/28 20:38:59.170234][info][220328][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/28 20:38:59.170246][info][220328][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/28 20:38:59.336453][info][220328][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/28 20:38:59.336646][info][220328][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x58EE37442510
+[04/28 20:38:59.394927][info][220328][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/28 20:38:59.395081][info][220328][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/28 20:38:59.395084][info][220328][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:38:59.395090][info][220328][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/28 20:38:59.395092][info][220328][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:38:59.397778][info][220328][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/28 20:38:59.397787][info][220328][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/28 20:38:59.397790][info][220328][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/28 20:38:59.623585][info][220328][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/28 20:38:59.623626][info][220328][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/28 20:38:59.882646][info][220461][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/28 20:39:00.027136][info][220456][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/28 20:39:00.027177][warning][220328][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/28 20:39:00.460622][warning][220487][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/28 20:39:03.463898][warning][220487][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**86 logs in 3003ms**]
+[04/28 20:39:04.886227][info][220461][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=30.175858fps
+[04/28 20:39:04.921334][info][220485][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.206676fps
+[04/28 20:39:05.032006][info][220456][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=30.175858fps
+[04/28 20:39:05.032068][info][220487][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=30.169830fps
+[04/28 20:39:07.512499][info][220328][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/28 20:39:07.512582][info][220328][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/28 20:39:07.512638][info][220328][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/28 20:39:07.570785][info][220328][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/28 20:39:07.570911][info][220328][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/28 20:39:07.570931][info][220328][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/28 20:39:07.611626][info][220328][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/28 20:39:07.611673][info][220328][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/28 20:39:07.611675][info][220328][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/28 20:39:07.611820][info][220328][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/28 20:39:07.611843][info][220328][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x58EE37442510
+[04/28 20:39:07.611906][info][220328][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:39:07.612726][info][220328][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:39:07.612737][info][220328][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:39:07.612786][info][220328][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:39:07.631585][info][220328][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:39:07.631607][info][220328][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:39:08.188972][warning][220590][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**97 logs in 4725ms, last: 20:39:07.501887**]
+[04/28 20:39:10.466448][info][220780][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/28 20:39:10.466519][info][220780][DeviceManager.cpp:25] Current found device(s): (1)
+[04/28 20:39:10.466528][info][220780][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:39:10.466536][info][220780][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:39:12.471914][info][220780][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/28 20:39:12.471967][info][220780][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:39:12.474890][info][220780][DeviceBase.cpp:651] key: HwType,value:L2
+[04/28 20:39:12.474918][info][220780][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/28 20:39:12.474925][info][220780][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/28 20:39:12.474930][info][220780][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/28 20:39:12.636275][info][220780][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/28 20:39:12.636761][info][220780][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x613C9B89E770
+[04/28 20:39:12.699020][info][220780][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/28 20:39:12.699202][info][220780][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/28 20:39:12.699206][info][220780][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:39:12.699211][info][220780][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/28 20:39:12.699213][info][220780][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:39:12.701885][info][220780][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/28 20:39:12.701896][info][220780][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/28 20:39:12.701899][info][220780][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/28 20:39:12.927334][info][220780][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/28 20:39:12.927375][info][220780][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/28 20:39:13.190433][info][220926][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/28 20:39:13.330864][warning][220780][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/28 20:39:13.331010][info][220925][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/28 20:39:13.764054][warning][220933][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/28 20:39:16.767617][warning][220933][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**86 logs in 3003ms**]
+[04/28 20:39:18.190733][info][220926][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=30.193962fps
+[04/28 20:39:18.226078][info][220931][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.254776fps
+[04/28 20:39:18.335912][info][220925][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=30.169830fps
+[04/28 20:39:18.335964][info][220933][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=30.175858fps
+[04/28 20:39:20.866507][info][220780][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/28 20:39:20.866567][info][220780][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/28 20:39:20.866607][info][220780][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/28 20:39:20.921742][info][220780][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/28 20:39:20.921830][info][220780][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/28 20:39:20.921848][info][220780][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/28 20:39:20.966471][info][220780][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/28 20:39:20.966653][info][220780][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/28 20:39:20.966662][info][220780][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/28 20:39:20.967044][info][220780][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/28 20:39:20.967114][info][220780][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x613C9B89E770
+[04/28 20:39:20.967301][info][220780][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:39:20.968381][info][220780][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:39:20.968392][info][220780][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:39:20.968495][info][220780][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:39:20.988061][info][220780][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:39:20.988104][info][220780][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:39:21.497380][warning][221056][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**98 logs in 4729ms, last: 20:39:20.876220**]
+[04/28 20:40:11.641537][info][222190][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/28 20:40:11.641610][info][222190][DeviceManager.cpp:25] Current found device(s): (1)
+[04/28 20:40:11.641620][info][222190][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:40:11.641630][info][222190][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:40:13.647150][info][222190][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/28 20:40:13.647216][info][222190][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:40:13.650844][info][222190][DeviceBase.cpp:651] key: HwType,value:L2
+[04/28 20:40:13.650886][info][222190][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/28 20:40:13.650897][info][222190][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/28 20:40:13.650908][info][222190][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/28 20:40:13.813377][info][222190][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/28 20:40:13.813691][info][222190][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x62756D0F59A0
+[04/28 20:40:13.880700][info][222190][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/28 20:40:13.880860][info][222190][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/28 20:40:13.880870][info][222190][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:40:13.880875][info][222190][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/28 20:40:13.880877][info][222190][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:40:13.883602][info][222190][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/28 20:40:13.883614][info][222190][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/28 20:40:13.883617][info][222190][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/28 20:40:14.109340][info][222190][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/28 20:40:14.109389][info][222190][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/28 20:40:14.371878][info][222327][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/28 20:40:14.512663][info][222326][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/28 20:40:14.512699][warning][222190][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/28 20:40:14.946111][warning][222339][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/28 20:40:17.949164][warning][222339][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**86 logs in 3003ms**]
+[04/28 20:40:19.372088][info][222327][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=30.193962fps
+[04/28 20:40:19.406898][info][222337][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.266827fps
+[04/28 20:40:19.517573][info][222326][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=30.169830fps
+[04/28 20:40:19.517667][info][222339][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=30.175858fps
+[04/28 20:40:23.367371][info][222190][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/28 20:40:23.367436][info][222190][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/28 20:40:23.368207][info][222190][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/28 20:40:23.425416][info][222190][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/28 20:40:23.425676][info][222190][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/28 20:40:23.425736][info][222190][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/28 20:40:23.467301][info][222190][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/28 20:40:23.467592][info][222190][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/28 20:40:23.467632][info][222190][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/28 20:40:23.467972][info][222190][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/28 20:40:23.468090][info][222190][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x62756D0F59A0
+[04/28 20:40:23.468386][info][222190][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:40:23.469865][info][222190][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:40:23.469907][info][222190][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:40:23.470085][info][222190][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:40:23.490135][info][222190][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:40:23.490175][info][222190][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:40:23.493782][warning][222465][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**124 logs in 5544ms, last: 20:40:23.355625**]
+[04/28 20:46:40.848958][info][230123][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/28 20:46:40.849041][info][230123][DeviceManager.cpp:25] Current found device(s): (1)
+[04/28 20:46:40.849051][info][230123][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:46:40.849059][info][230123][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:46:42.854962][info][230123][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/28 20:46:42.855033][info][230123][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:46:42.857626][info][230123][DeviceBase.cpp:651] key: HwType,value:L2
+[04/28 20:46:42.857650][info][230123][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/28 20:46:42.857658][info][230123][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/28 20:46:42.857664][info][230123][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/28 20:46:43.017279][info][230123][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/28 20:46:43.017487][info][230123][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x587C9BC6CEA0
+[04/28 20:46:43.073501][info][230123][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/28 20:46:43.073821][info][230123][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/28 20:46:43.073832][info][230123][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:46:43.073838][info][230123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/28 20:46:43.073840][info][230123][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:46:43.076477][info][230123][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/28 20:46:43.076485][info][230123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/28 20:46:43.076488][info][230123][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/28 20:46:43.314542][info][230123][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/28 20:46:43.314588][info][230123][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/28 20:46:43.543154][info][230264][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/28 20:46:43.684402][info][230260][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/28 20:46:44.184683][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/28 20:46:47.187531][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**87 logs in 3002ms**]
+[04/28 20:46:48.543979][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=30.193962fps
+[04/28 20:46:48.584700][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.206676fps
+[04/28 20:46:48.689394][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=30.169830fps
+[04/28 20:46:48.689573][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=30.169830fps
+[04/28 20:46:53.194698][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**180 logs in 6007ms**]
+[04/28 20:46:53.549896][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:46:53.590544][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:46:53.695300][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:46:53.695492][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:46:58.555893][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:46:58.596268][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:46:58.701186][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:46:58.701372][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:03.561823][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:03.602332][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:03.707107][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:03.707273][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:05.208935][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**360 logs in 12014ms**]
+[04/28 20:47:08.567710][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:08.608257][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:08.713015][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:47:08.713145][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:13.573684][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:13.614574][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:13.718931][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:13.719094][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:18.579477][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:18.620052][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:18.724947][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:18.725217][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:23.585427][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:23.626433][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:23.730910][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:23.731131][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:28.591439][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:28.632146][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:28.736771][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:28.737094][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:29.237432][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**720 logs in 24028ms**]
+[04/28 20:47:33.597394][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:33.638060][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:33.742687][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:33.742842][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:47:38.603210][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:38.643967][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:47:38.748664][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:38.748890][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:43.609203][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:43.649618][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:43.754465][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:43.754636][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:48.615125][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:48.655711][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:48.760518][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:48.760713][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:53.621015][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:47:53.661863][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:47:53.766471][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:53.766714][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:47:58.626353][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:47:58.666916][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:47:58.772304][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:47:58.772549][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:03.632943][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:03.673731][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:48:03.778225][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:03.778424][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:08.638788][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:08.679491][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:08.784082][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:08.784275][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:13.644737][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:13.685271][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:13.790017][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:48:13.790197][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:17.260975][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1439 logs in 48023ms**]
+[04/28 20:48:18.650662][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:18.691215][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:18.796091][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.958059fps
+[04/28 20:48:18.796342][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:23.656520][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:23.697325][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:23.801818][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:48:23.802002][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:48:28.662415][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:28.699927][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.988007fps
+[04/28 20:48:28.807930][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:28.808176][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.958059fps
+[04/28 20:48:33.668356][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:33.708858][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.946098fps
+[04/28 20:48:33.813757][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:33.813945][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:48:38.674340][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:38.714946][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:38.819626][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:38.819884][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:43.680200][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:43.720972][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:43.825550][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:43.825803][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:48.686160][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:48.726728][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:48.831450][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:48.831681][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:53.692749][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:53.733698][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:48:53.837555][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:53.837763][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:48:58.698115][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:48:58.739216][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:48:58.843329][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:48:58.843531][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:03.703918][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:49:03.743652][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.976019fps
+[04/28 20:49:03.849229][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:03.849425][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:08.709874][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:08.750566][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:49:08.855150][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:08.855443][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:13.715797][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:13.756351][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:49:13.861085][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:13.861370][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:17.265141][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1798 logs in 60004ms**]
+[04/28 20:49:18.721705][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:18.762485][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:49:18.867025][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:18.867200][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:23.727619][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:23.768132][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:49:23.872884][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:49:23.872990][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:49:28.733553][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:28.773103][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:49:28.878862][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:28.878994][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:33.739427][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:33.775530][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.988007fps
+[04/28 20:49:33.884737][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:33.884802][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:38.745371][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:49:38.783778][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.952078fps
+[04/28 20:49:38.890610][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:38.890679][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:43.750729][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:49:43.792087][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.946098fps
+[04/28 20:49:43.896543][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:43.896598][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:48.757251][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.958059fps
+[04/28 20:49:48.797995][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:49:48.902529][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:48.902594][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:53.764048][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.958059fps
+[04/28 20:49:53.804582][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:49:53.908362][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:53.908418][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:49:58.768865][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.976019fps
+[04/28 20:49:58.810827][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:49:58.914300][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:49:58.914356][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:03.775053][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.958059fps
+[04/28 20:50:03.816778][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:50:03.920374][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:03.920578][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:08.780390][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:50:08.821796][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:50:08.926203][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:08.926375][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:13.786960][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:13.823503][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.988007fps
+[04/28 20:50:13.932249][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:13.932541][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:17.269682][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1798 logs in 60004ms**]
+[04/28 20:50:18.792782][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:18.832780][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.946098fps
+[04/28 20:50:18.938079][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:18.938275][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:23.798824][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:23.840151][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.952078fps
+[04/28 20:50:23.944009][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:50:23.944244][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:28.804612][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:28.844641][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.976019fps
+[04/28 20:50:28.949862][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:28.949940][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:50:33.810519][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:33.851248][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:50:33.956059][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.958059fps
+[04/28 20:50:33.956229][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.958059fps
+[04/28 20:50:38.816591][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:38.857414][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:50:38.961792][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:50:38.962023][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:43.822455][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:43.890341][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.001987fps
+[04/28 20:50:43.967767][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:43.968124][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:50:48.828400][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:48.898433][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.952078fps
+[04/28 20:50:48.973749][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:48.973958][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:50:53.834265][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:53.902284][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.976019fps
+[04/28 20:50:53.979780][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:53.980069][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.958059fps
+[04/28 20:50:58.840189][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:50:58.908253][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:50:58.985654][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:50:58.985846][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:51:03.846110][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:03.914301][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:03.991423][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:03.991603][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:08.852062][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:08.921846][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:51:08.997342][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:08.997563][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:13.858002][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:51:13.925821][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.976019fps
+[04/28 20:51:14.003543][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:14.003772][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:17.273978][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1798 logs in 60004ms**]
+[04/28 20:51:18.863843][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:18.937696][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.928171fps
+[04/28 20:51:19.009095][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:19.009141][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:23.869856][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:23.939593][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.988007fps
+[04/28 20:51:24.015175][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:24.015371][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:28.875162][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:28.949835][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.940119fps
+[04/28 20:51:29.021048][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:29.021229][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:33.881087][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:33.955911][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:34.027092][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:34.027339][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:38.887001][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:51:38.961504][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:39.032952][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:51:39.033114][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:43.892954][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:43.967367][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:44.038877][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:44.039049][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:48.898855][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:48.973067][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:49.044744][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:49.044930][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:51:53.904764][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:51:53.979263][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:54.050675][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:54.050869][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:51:58.911039][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.958059fps
+[04/28 20:51:58.985206][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:51:59.056504][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:51:59.056555][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:03.916766][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:52:03.987483][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.988007fps
+[04/28 20:52:04.062533][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:04.062702][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:08.922950][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:08.997591][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.940119fps
+[04/28 20:52:09.068527][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:09.068716][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:13.929100][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.958059fps
+[04/28 20:52:14.002957][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:52:14.074467][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:14.074696][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:17.278238][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1798 logs in 60004ms**]
+[04/28 20:52:18.934989][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:52:19.008796][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:52:19.080530][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:19.080787][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:23.940856][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:24.014473][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:52:24.086213][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:24.086412][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:28.946811][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:29.020777][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:52:29.092163][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:29.092364][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:33.952792][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:34.026679][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:52:34.098078][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:34.098280][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:38.958679][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:39.064744][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.972210fps
+[04/28 20:52:39.104094][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:39.104277][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:43.964619][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:44.067556][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.982012fps
+[04/28 20:52:44.110028][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:52:44.110200][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:48.969956][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:52:49.078045][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.934143fps
+[04/28 20:52:49.115979][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:49.116187][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:52:53.976488][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.958059fps
+[04/28 20:52:54.083785][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:52:54.121760][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:54.121941][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:52:58.982412][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:52:59.089859][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:52:59.127709][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:52:59.127888][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:03.988333][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:04.095480][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:04.133827][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:04.134103][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.958059fps
+[04/28 20:53:08.994201][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:09.101725][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:09.139687][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:09.139887][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:53:14.000181][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:14.107801][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:14.145505][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:14.145735][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:17.282585][warning][230296][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1798 logs in 60004ms**]
+[04/28 20:53:19.006106][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:19.113226][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:19.151390][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:19.151496][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:24.011785][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:53:24.119765][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:24.157376][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:24.157647][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:29.017937][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:29.125464][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:29.163274][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:29.163607][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:34.023953][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:34.131078][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:34.169302][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:34.169602][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:39.029840][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:39.137231][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:39.175111][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:39.175363][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:44.035792][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:44.143061][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:44.181081][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:44.181246][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:49.041709][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:49.145406][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.988007fps
+[04/28 20:53:49.186979][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:53:49.187174][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:53:54.047031][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:54.149022][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.976019fps
+[04/28 20:53:54.192901][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:54.192965][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:53:59.053222][info][230264][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:53:59.155156][info][230266][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:53:59.198781][info][230260][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:53:59.198884][info][230296][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:54:01.090185][info][230123][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/28 20:54:01.090243][info][230123][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/28 20:54:01.090285][info][230123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/28 20:54:01.143394][info][230123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/28 20:54:01.143571][info][230123][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/28 20:54:01.143591][info][230123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/28 20:54:01.185434][info][230123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/28 20:54:01.185722][info][230123][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/28 20:54:01.185733][info][230123][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/28 20:54:01.185991][info][230123][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/28 20:54:01.186072][info][230123][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x587C9BC6CEA0
+[04/28 20:54:01.186236][info][230123][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:54:01.187594][info][230123][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:54:01.187610][info][230123][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:54:01.187741][info][230123][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:54:01.207255][info][230123][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:54:01.207292][info][230123][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:54:01.211129][warning][238888][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**1199 logs in 43928ms, last: 20:54:01.143569**]
+[04/28 20:57:16.254464][info][243972][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/28 20:57:16.254536][info][243972][DeviceManager.cpp:25] Current found device(s): (1)
+[04/28 20:57:16.254546][info][243972][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:57:16.254555][info][243972][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:57:18.260205][info][243972][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/28 20:57:18.260298][info][243972][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:57:18.263122][info][243972][DeviceBase.cpp:651] key: HwType,value:L2
+[04/28 20:57:18.263147][info][243972][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/28 20:57:18.263156][info][243972][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/28 20:57:18.263175][info][243972][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/28 20:57:18.424047][info][243972][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/28 20:57:18.424280][info][243972][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5A7BF1C164B0
+[04/28 20:57:18.480790][info][243972][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/28 20:57:18.480945][info][243972][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/28 20:57:18.480950][info][243972][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:57:18.480956][info][243972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/28 20:57:18.480959][info][243972][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:57:18.483616][info][243972][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/28 20:57:18.483627][info][243972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/28 20:57:18.483630][info][243972][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/28 20:57:18.709079][info][243972][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/28 20:57:18.709122][info][243972][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/28 20:57:18.969128][info][244123][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/28 20:57:19.079353][info][244118][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/28 20:57:19.579039][warning][244126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/28 20:57:22.582663][warning][244126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**87 logs in 3003ms**]
+[04/28 20:57:23.972308][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=30.175858fps
+[04/28 20:57:24.013085][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.230709fps
+[04/28 20:57:24.084345][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=30.169830fps
+[04/28 20:57:24.084553][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=30.169830fps
+[04/28 20:57:28.589601][warning][244126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**180 logs in 6006ms**]
+[04/28 20:57:28.978160][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:57:29.018719][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:57:29.090132][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:57:29.090245][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:57:33.984131][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:57:34.025760][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.958059fps
+[04/28 20:57:34.096187][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:57:34.096373][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:57:38.989510][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:57:39.030737][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.970030fps
+[04/28 20:57:39.102149][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:57:39.102464][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:57:40.603874][warning][244126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**360 logs in 12014ms**]
+[04/28 20:57:43.995933][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:57:44.036434][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:57:44.108036][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:57:44.108300][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:57:49.001969][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:57:49.042384][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:57:49.113993][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:57:49.114263][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:57:54.007777][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:57:54.048106][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:57:54.119769][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:57:54.119924][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:57:59.013817][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:57:59.054305][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:57:59.125714][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:57:59.125995][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:58:04.019757][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:58:04.060489][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:58:04.131638][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:58:04.132038][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.958059fps
+[04/28 20:58:04.632260][warning][244126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**720 logs in 24028ms**]
+[04/28 20:58:09.025123][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:58:09.093570][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.001987fps
+[04/28 20:58:09.137472][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:58:09.137515][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:58:14.031055][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:58:14.099551][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:58:14.143415][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:58:14.143460][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:58:19.036931][info][244123][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.970030fps
+[04/28 20:58:19.105524][info][244124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:58:19.149336][info][244118][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:58:19.149398][info][244126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:58:21.701012][info][243972][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/28 20:58:21.701044][info][243972][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/28 20:58:21.701068][info][243972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/28 20:58:21.751645][warning][244118][VideoSensor.cpp:184] [CP3F5420000Z] This frame will be dropped because jpg format verification failure! @Color
+[04/28 20:58:21.751679][info][243972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/28 20:58:21.751762][info][243972][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/28 20:58:21.751775][info][243972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/28 20:58:21.793261][info][243972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/28 20:58:21.793473][info][243972][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/28 20:58:21.793522][info][243972][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/28 20:58:21.793789][info][243972][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/28 20:58:21.793860][info][243972][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5A7BF1C164B0
+[04/28 20:58:21.794057][info][243972][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:58:21.795233][info][243972][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:58:21.795251][info][243972][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:58:21.795390][info][243972][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:58:21.815035][info][243972][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:58:21.815096][info][243972][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:58:21.820503][warning][245178][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**380 logs in 17188ms, last: 20:58:21.685799**]
+[04/28 20:58:40.118487][info][245965][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/28 20:58:40.118557][info][245965][DeviceManager.cpp:25] Current found device(s): (1)
+[04/28 20:58:40.118567][info][245965][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:58:40.118575][info][245965][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/28 20:58:42.123765][info][245965][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/28 20:58:42.123822][info][245965][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/28 20:58:42.127123][info][245965][DeviceBase.cpp:651] key: HwType,value:L2
+[04/28 20:58:42.127164][info][245965][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/28 20:58:42.127176][info][245965][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/28 20:58:42.127185][info][245965][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/28 20:58:42.289018][info][245965][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/28 20:58:42.289331][info][245965][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x641ED5E12030
+[04/28 20:58:42.354004][info][245965][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/28 20:58:42.354275][info][245965][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/28 20:58:42.354286][info][245965][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:58:42.354292][info][245965][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/28 20:58:42.354295][info][245965][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/28 20:58:42.357043][info][245965][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/28 20:58:42.357055][info][245965][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/28 20:58:42.357058][info][245965][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/28 20:58:42.582603][info][245965][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/28 20:58:42.582640][info][245965][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/28 20:58:42.846887][info][246099][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/28 20:58:42.985772][warning][245965][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/28 20:58:42.986126][info][246094][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/28 20:58:43.419512][warning][246126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/28 20:58:46.422621][warning][246126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**86 logs in 3003ms**]
+[04/28 20:58:47.878842][info][246099][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=30.206676fps
+[04/28 20:58:47.880603][info][246124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=30.315119fps
+[04/28 20:58:47.991165][info][246094][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=30.169830fps
+[04/28 20:58:47.991338][info][246126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=30.169830fps
+[04/28 20:58:52.429749][warning][246126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**180 logs in 6007ms**]
+[04/28 20:58:52.884481][info][246099][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:58:52.886204][info][246124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:58:52.997037][info][246094][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:58:52.997222][info][246126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:58:57.890445][info][246099][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:58:57.892190][info][246124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:58:58.002863][info][246094][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.970030fps
+[04/28 20:58:58.002954][info][246126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.970030fps
+[04/28 20:59:02.896384][info][246099][VideoSensor.cpp:153] [CP3F5420000Z] Depth backend frame callback, frameRate=29.964043fps
+[04/28 20:59:02.898329][info][246124][SensorBase.cpp:370] [CP3F5420000Z] Depth Streaming... frameRate=29.964043fps
+[04/28 20:59:03.008803][info][246094][VideoSensor.cpp:153] [CP3F5420000Z] Color backend frame callback, frameRate=29.964043fps
+[04/28 20:59:03.008869][info][246126][SensorBase.cpp:370] [CP3F5420000Z] Color Streaming... frameRate=29.964043fps
+[04/28 20:59:04.443920][warning][246126][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**250 logs in 12014ms**]
+[04/28 20:59:04.795136][info][245965][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/28 20:59:04.795185][info][245965][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/28 20:59:04.795225][info][245965][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/28 20:59:04.848714][info][245965][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/28 20:59:04.848826][info][245965][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/28 20:59:04.848843][info][245965][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/28 20:59:04.891638][info][245965][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/28 20:59:04.891691][info][245965][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/28 20:59:04.891693][info][245965][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/28 20:59:04.891822][info][245965][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/28 20:59:04.891843][info][245965][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x641ED5E12030
+[04/28 20:59:04.891905][info][245965][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:59:04.892665][info][245965][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:59:04.892674][info][245965][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:59:04.892709][info][245965][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/28 20:59:04.911278][info][245965][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/28 20:59:04.911297][info][245965][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/28 20:59:05.164181][warning][246692][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**9 logs in 720ms, last: 20:59:04.777693**]
+[04/29 01:38:49.600817][info][574995][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 01:38:49.600892][info][574995][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 01:38:49.600903][info][574995][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 01:38:49.600911][info][574995][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 01:38:51.606469][info][574995][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 01:38:51.606528][info][574995][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 01:38:51.609156][info][574995][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 01:38:51.609181][info][574995][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 01:38:51.609189][info][574995][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 01:38:51.609194][info][574995][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 01:38:51.769812][info][574995][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 01:38:51.770006][info][574995][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x568D635B7560
+[04/29 01:38:51.824069][info][574995][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 01:38:51.824295][info][574995][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 01:38:51.824306][info][574995][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 01:38:51.824316][info][574995][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 01:38:51.824319][info][574995][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 01:38:51.826997][info][574995][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 01:38:51.827008][info][574995][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 01:38:51.827012][info][574995][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 01:38:52.052963][info][574995][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 01:38:52.053014][info][574995][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 01:38:52.316026][info][575189][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 01:38:52.455836][info][575184][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 01:38:52.956505][warning][575196][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 01:38:53.540897][info][574995][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 01:38:53.540925][info][574995][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 01:38:53.540945][info][574995][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 01:38:53.595126][info][574995][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 01:38:53.595216][info][574995][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 01:38:53.595232][info][574995][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 01:38:53.639385][info][574995][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 01:38:53.639617][info][574995][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 01:38:53.639625][info][574995][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 01:38:53.639839][info][574995][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 01:38:53.639893][info][574995][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x568D635B7560
+[04/29 01:38:53.640057][info][574995][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 01:38:53.641197][info][574995][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 01:38:53.641210][info][574995][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 01:38:53.641333][info][574995][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 01:38:53.660514][info][574995][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 01:38:53.660543][info][574995][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 01:38:54.618807][warning][575220][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**9 logs in 1662ms, last: 01:38:53.456849**]
+[04/29 14:06:11.296095][info][89259][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 14:06:11.296125][info][89259][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 14:06:11.296131][info][89259][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 14:06:11.296135][info][89259][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 14:06:13.301178][info][89259][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 14:06:13.301248][info][89259][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 14:06:13.305692][info][89259][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 14:06:13.305756][info][89259][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 14:06:13.305764][info][89259][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 14:06:13.305771][info][89259][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 14:06:13.470115][info][89259][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 14:06:13.470309][info][89259][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5CF492447150
+[04/29 14:06:13.537989][info][89259][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 14:06:13.538146][info][89259][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 14:06:13.538150][info][89259][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 14:06:13.538155][info][89259][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 14:06:13.538158][info][89259][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 14:06:13.540835][info][89259][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 14:06:13.540849][info][89259][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 14:06:13.540853][info][89259][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 14:06:13.760304][info][89259][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 14:06:13.760334][info][89259][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 14:06:14.022962][info][89468][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 14:06:14.162912][info][89463][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 14:06:14.163062][warning][89259][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 14:06:14.596159][warning][89471][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 14:06:15.268079][info][89259][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 14:06:15.268143][info][89259][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 14:06:15.268179][info][89259][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 14:06:15.323755][info][89259][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 14:06:15.323794][info][89259][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 14:06:15.323801][info][89259][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 14:06:15.365828][info][89259][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 14:06:15.366081][info][89259][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 14:06:15.366115][info][89259][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 14:06:15.366452][info][89259][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 14:06:15.366553][info][89259][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5CF492447150
+[04/29 14:06:15.366751][info][89259][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 14:06:15.368183][info][89259][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 14:06:15.368216][info][89259][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 14:06:15.368333][info][89259][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 14:06:15.387900][info][89259][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 14:06:15.387933][info][89259][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 14:06:16.310634][warning][89521][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**11 logs in 1714ms, last: 14:06:15.263404**]
+[04/29 14:23:24.361688][info][110053][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 14:23:24.361718][info][110053][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 14:23:24.361723][info][110053][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 14:23:24.361728][info][110053][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 14:23:26.367499][info][110053][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 14:23:26.367596][info][110053][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 14:23:26.371862][info][110053][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 14:23:26.371926][info][110053][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 14:23:26.371946][info][110053][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 14:23:26.371959][info][110053][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 14:23:26.530044][info][110053][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 14:23:26.530106][info][110053][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x626D7CBABCC0
+[04/29 14:23:26.578189][info][110053][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 14:23:26.578365][info][110053][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 14:23:26.578369][info][110053][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 14:23:26.578379][info][110053][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 14:23:26.578382][info][110053][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 14:23:26.581051][info][110053][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 14:23:26.581059][info][110053][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 14:23:26.581062][info][110053][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 14:23:26.807141][info][110053][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 14:23:26.807187][info][110053][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 14:23:27.065551][info][110244][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 14:23:27.209940][info][110243][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 14:23:27.710374][warning][110259][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 14:23:28.276409][info][110053][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 14:23:28.276439][info][110053][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 14:23:28.276457][info][110053][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 14:23:28.327278][info][110053][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 14:23:28.327335][info][110053][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 14:23:28.327343][info][110053][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 14:23:28.369481][info][110053][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 14:23:28.369604][info][110053][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 14:23:28.369615][info][110053][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 14:23:28.369798][info][110053][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 14:23:28.369908][info][110053][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x626D7CBABCC0
+[04/29 14:23:28.370144][info][110053][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 14:23:28.371263][info][110053][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 14:23:28.371280][info][110053][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 14:23:28.371373][info][110053][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 14:23:28.390063][info][110053][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 14:23:28.390080][info][110053][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 14:23:29.377466][warning][110295][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**9 logs in 1667ms, last: 14:23:28.282544**]
+[04/29 15:11:58.451519][info][167452][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:11:58.451594][info][167452][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:11:58.451605][info][167452][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:11:58.451614][info][167452][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:12:00.456997][info][167452][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:12:00.457056][info][167452][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:12:00.460518][info][167452][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:12:00.460566][info][167452][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:12:00.460574][info][167452][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:12:00.460580][info][167452][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:12:00.621433][info][167452][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:12:00.621747][info][167452][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5DB619FB8A00
+[04/29 15:12:00.675871][info][167452][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:12:00.676100][info][167452][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:12:00.676110][info][167452][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:12:00.676115][info][167452][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:12:00.676118][info][167452][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:12:00.678789][info][167452][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:12:00.678797][info][167452][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:12:00.678799][info][167452][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:12:00.904640][info][167452][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:12:00.904684][info][167452][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:12:01.166509][info][167654][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:12:01.274624][info][167630][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:12:01.774681][warning][167660][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:12:02.385814][info][167452][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:12:02.385854][info][167452][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:12:02.385878][info][167452][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:12:02.435596][info][167452][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:12:02.435666][info][167452][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:12:02.435681][info][167452][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:12:02.477968][info][167452][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:12:02.478051][info][167452][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:12:02.478056][info][167452][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:12:02.478242][info][167452][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:12:02.478289][info][167452][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5DB619FB8A00
+[04/29 15:12:02.478413][info][167452][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:12:02.479421][info][167452][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:12:02.479432][info][167452][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:12:02.479511][info][167452][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:12:02.498730][info][167452][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:12:02.498779][info][167452][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:12:03.464166][warning][167685][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1689ms, last: 15:12:02.341752**]
+[04/29 15:18:23.584521][info][175197][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:18:23.584610][info][175197][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:18:23.584623][info][175197][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:18:23.584651][info][175197][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:18:25.590247][info][175197][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:18:25.590265][info][175197][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:18:25.591671][info][175197][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:18:25.591680][info][175197][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:18:25.591681][info][175197][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:18:25.591683][info][175197][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:18:25.751638][info][175197][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:18:25.751837][info][175197][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x584FC8812A00
+[04/29 15:18:25.800854][info][175197][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:18:25.801006][info][175197][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:18:25.801009][info][175197][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:18:25.801014][info][175197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:18:25.801016][info][175197][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:18:25.803659][info][175197][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:18:25.803670][info][175197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:18:25.803672][info][175197][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:18:26.029321][info][175197][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:18:26.029372][info][175197][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:18:26.291309][info][175401][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:18:26.432456][info][175387][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:18:26.933085][warning][175415][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:18:27.538920][info][175197][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:18:27.538984][info][175197][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:18:27.539024][info][175197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:18:27.594366][info][175197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:18:27.594461][info][175197][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:18:27.594477][info][175197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:18:27.637416][info][175197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:18:27.637554][info][175197][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:18:27.637562][info][175197][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:18:27.637764][info][175197][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:18:27.637846][info][175197][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x584FC8812A00
+[04/29 15:18:27.638029][info][175197][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:18:27.639248][info][175197][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:18:27.639260][info][175197][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:18:27.639363][info][175197][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:18:27.658582][info][175197][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:18:27.658642][info][175197][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:18:28.600490][warning][175443][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1667ms, last: 15:18:27.533357**]
+[04/29 15:31:45.745634][info][191223][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:31:45.745711][info][191223][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:31:45.745721][info][191223][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:31:45.745731][info][191223][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:31:47.751140][info][191223][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:31:47.751205][info][191223][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:31:47.754062][info][191223][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:31:47.754095][info][191223][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:31:47.754104][info][191223][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:31:47.754110][info][191223][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:31:47.915616][info][191223][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:31:47.915833][info][191223][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x602B1E65A340
+[04/29 15:31:47.973361][info][191223][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:31:47.973523][info][191223][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:31:47.973527][info][191223][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:31:47.973532][info][191223][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:31:47.973535][info][191223][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:31:47.976216][info][191223][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:31:47.976228][info][191223][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:31:47.976231][info][191223][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:31:48.202080][info][191223][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:31:48.202138][info][191223][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:31:48.463363][info][191414][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:31:48.605145][info][191410][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:31:48.605503][warning][191223][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:31:49.071762][warning][191431][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:31:49.692884][info][191223][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:31:49.692941][info][191223][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:31:49.692983][info][191223][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:31:49.746829][info][191223][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:31:49.746879][info][191223][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:31:49.746888][info][191223][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:31:49.789146][info][191223][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:31:49.789238][info][191223][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:31:49.789262][info][191223][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:31:49.789462][info][191223][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:31:49.789518][info][191223][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x602B1E65A340
+[04/29 15:31:49.789696][info][191223][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:31:49.790715][info][191223][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:31:49.790725][info][191223][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:31:49.790847][info][191223][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:31:49.811085][info][191223][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:31:49.811137][info][191223][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:31:50.760653][warning][191456][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1688ms, last: 15:31:49.605610**]
+[04/29 15:35:09.027543][info][195664][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:35:09.027617][info][195664][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:35:09.027627][info][195664][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:35:09.027636][info][195664][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:35:11.032848][info][195664][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:35:11.032916][info][195664][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:35:11.036473][info][195664][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:35:11.036497][info][195664][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:35:11.036505][info][195664][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:35:11.036513][info][195664][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:35:11.198672][info][195664][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:35:11.198873][info][195664][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x654DF8D9C660
+[04/29 15:35:11.255110][info][195664][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:35:11.255268][info][195664][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:35:11.255272][info][195664][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:35:11.255278][info][195664][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:35:11.255280][info][195664][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:35:11.257931][info][195664][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:35:11.257939][info][195664][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:35:11.257942][info][195664][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:35:11.483662][info][195664][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:35:11.483704][info][195664][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:35:11.742206][info][195838][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:35:11.886790][info][195837][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:35:11.887194][warning][195664][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:35:12.353325][warning][195853][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:35:12.981962][info][195664][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:35:12.982017][info][195664][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:35:12.982056][info][195664][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:35:13.035337][info][195664][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:35:13.035418][info][195664][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:35:13.035432][info][195664][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:35:13.078143][info][195664][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:35:13.078267][info][195664][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:35:13.078276][info][195664][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:35:13.078495][info][195664][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:35:13.078568][info][195664][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x654DF8D9C660
+[04/29 15:35:13.078773][info][195664][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:35:13.080111][info][195664][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:35:13.080125][info][195664][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:35:13.080228][info][195664][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:35:13.099059][info][195664][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:35:13.099076][info][195664][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:35:14.043046][warning][195893][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**11 logs in 1689ms, last: 15:35:12.990258**]
+[04/29 15:36:10.829429][info][197105][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:36:10.829504][info][197105][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:36:10.829514][info][197105][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:36:10.829523][info][197105][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:36:12.835388][info][197105][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:36:12.835455][info][197105][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:36:12.837602][info][197105][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:36:12.837629][info][197105][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:36:12.837636][info][197105][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:36:12.837642][info][197105][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:36:12.998114][info][197105][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:36:12.998325][info][197105][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x58805641C960
+[04/29 15:36:13.051673][info][197105][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:36:13.051837][info][197105][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:36:13.051842][info][197105][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:36:13.051848][info][197105][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:36:13.051851][info][197105][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:36:13.054517][info][197105][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:36:13.054528][info][197105][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:36:13.054531][info][197105][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:36:13.280140][info][197105][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:36:13.280182][info][197105][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:36:13.544487][info][197300][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:36:13.683556][info][197291][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:36:13.683672][warning][197105][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:36:14.116472][warning][197307][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:36:14.791235][info][197105][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:36:14.791289][info][197105][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:36:14.791328][info][197105][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:36:14.844286][info][197105][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:36:14.844375][info][197105][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:36:14.844393][info][197105][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:36:14.886701][info][197105][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:36:14.886921][info][197105][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:36:14.886932][info][197105][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:36:14.887132][info][197105][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:36:14.887195][info][197105][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x58805641C960
+[04/29 15:36:14.887370][info][197105][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:36:14.888643][info][197105][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:36:14.888687][info][197105][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:36:14.888827][info][197105][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:36:14.908619][info][197105][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:36:14.908654][info][197105][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:36:15.842673][warning][197332][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**11 logs in 1726ms, last: 15:36:14.783921**]
+[04/29 15:36:34.977534][info][197801][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:36:34.977621][info][197801][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:36:34.977632][info][197801][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:36:34.977644][info][197801][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:36:36.982114][info][197801][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:36:36.982138][info][197801][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:36:36.983883][info][197801][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:36:36.983892][info][197801][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:36:36.983894][info][197801][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:36:36.983896][info][197801][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:36:37.144054][info][197801][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:36:37.144270][info][197801][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5C51E5ECB4D0
+[04/29 15:36:37.200699][info][197801][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:36:37.200856][info][197801][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:36:37.200861][info][197801][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:36:37.200871][info][197801][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:36:37.200873][info][197801][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:36:37.203543][info][197801][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:36:37.203555][info][197801][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:36:37.203559][info][197801][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:36:37.429165][info][197801][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:36:37.429206][info][197801][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:36:37.694138][info][197990][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:36:37.799219][info][197985][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:36:38.299632][warning][198007][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:36:38.903666][info][197801][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:36:38.903727][info][197801][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:36:38.903767][info][197801][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:36:38.955501][info][197801][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:36:38.955636][info][197801][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:36:38.955655][info][197801][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:36:38.998417][info][197801][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:36:38.998493][info][197801][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:36:38.998498][info][197801][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:36:38.998683][info][197801][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:36:38.998741][info][197801][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5C51E5ECB4D0
+[04/29 15:36:38.998921][info][197801][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:36:38.999903][info][197801][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:36:38.999914][info][197801][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:36:38.999991][info][197801][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:36:39.018953][info][197801][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:36:39.018988][info][197801][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:36:39.991619][warning][198032][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1691ms, last: 15:36:38.899957**]
+[04/29 15:38:06.386398][info][199969][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:38:06.386673][info][199969][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:38:06.386684][info][199969][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:38:06.386695][info][199969][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:38:08.392174][info][199969][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:38:08.392249][info][199969][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:38:08.593190][info][199969][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:38:08.593235][info][199969][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:38:08.593246][info][199969][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:38:08.593276][info][199969][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:38:08.755556][info][199969][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:38:08.755746][info][199969][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5F59B603AAF0
+[04/29 15:38:08.812090][info][199969][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:38:08.812268][info][199969][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:38:08.812272][info][199969][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:38:08.812278][info][199969][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:38:08.812280][info][199969][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:38:08.815000][info][199969][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:38:08.815009][info][199969][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:38:08.815011][info][199969][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:38:09.040684][info][199969][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:38:09.040740][info][199969][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:38:09.302815][info][200171][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:38:09.444081][info][200166][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:38:09.444494][warning][199969][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:38:09.910622][warning][200175][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:38:10.528283][info][199969][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:38:10.528330][info][199969][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:38:10.528360][info][199969][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:38:10.582786][info][199969][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:38:10.582919][info][199969][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:38:10.582942][info][199969][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:38:10.626050][info][199969][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:38:10.626149][info][199969][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:38:10.626156][info][199969][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:38:10.626380][info][199969][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:38:10.626435][info][199969][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5F59B603AAF0
+[04/29 15:38:10.626602][info][199969][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:38:10.627845][info][199969][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:38:10.627859][info][199969][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:38:10.627963][info][199969][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:38:10.647566][info][199969][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:38:10.647602][info][199969][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:38:11.400065][warning][200210][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1489ms, last: 15:38:10.477886**]
+[04/29 15:40:33.475679][info][203128][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:40:33.475750][info][203128][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:40:33.475776][info][203128][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:40:33.475784][info][203128][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:40:35.480814][info][203128][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:40:35.480834][info][203128][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:40:35.482270][info][203128][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:40:35.482279][info][203128][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:40:35.482281][info][203128][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:40:35.482282][info][203128][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:40:35.645342][info][203128][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:40:35.645545][info][203128][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x60BDCCA4D040
+[04/29 15:40:35.705683][info][203128][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:40:35.705988][info][203128][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:40:35.706000][info][203128][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:40:35.706006][info][203128][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:40:35.706008][info][203128][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:40:35.708807][info][203128][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:40:35.708818][info][203128][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:40:35.708821][info][203128][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:40:35.934407][info][203128][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:40:35.934450][info][203128][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:40:36.198333][info][203317][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:40:36.337850][info][203316][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:40:36.338213][warning][203128][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:40:36.771098][warning][203339][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:40:37.432745][info][203128][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:40:37.432830][info][203128][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:40:37.432878][info][203128][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:40:37.486651][info][203128][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:40:37.486716][info][203128][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:40:37.486730][info][203128][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:40:37.529100][info][203128][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:40:37.529183][info][203128][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:40:37.529188][info][203128][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:40:37.529355][info][203128][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:40:37.529399][info][203128][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x60BDCCA4D040
+[04/29 15:40:37.529508][info][203128][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:40:37.530466][info][203128][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:40:37.530474][info][203128][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:40:37.530548][info][203128][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:40:37.549574][info][203128][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:40:37.549614][info][203128][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:40:38.491667][warning][203376][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**11 logs in 1720ms, last: 15:40:37.441321**]
+[04/29 15:41:35.325704][info][204623][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:41:35.325781][info][204623][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:41:35.325791][info][204623][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:41:35.325814][info][204623][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:41:37.331403][info][204623][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:41:37.331468][info][204623][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:41:37.334221][info][204623][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:41:37.334252][info][204623][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:41:37.334260][info][204623][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:41:37.334266][info][204623][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:41:37.493087][info][204623][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:41:37.493209][info][204623][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x64CCFA31B4A0
+[04/29 15:41:37.539348][info][204623][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:41:37.539513][info][204623][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:41:37.539518][info][204623][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:41:37.539523][info][204623][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:41:37.539525][info][204623][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:41:37.542177][info][204623][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:41:37.542187][info][204623][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:41:37.542190][info][204623][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:41:37.767625][info][204623][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:41:37.767665][info][204623][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:41:38.031000][info][204815][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:41:38.171047][info][204814][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:41:38.171245][warning][204623][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:41:38.604115][warning][204822][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:41:39.256861][info][204623][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:41:39.256937][info][204623][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:41:39.256985][info][204623][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:41:39.310561][info][204623][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:41:39.310659][info][204623][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:41:39.310700][info][204623][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:41:39.353261][info][204623][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:41:39.353349][info][204623][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:41:39.353354][info][204623][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:41:39.353507][info][204623][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:41:39.353538][info][204623][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x64CCFA31B4A0
+[04/29 15:41:39.353622][info][204623][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:41:39.354422][info][204623][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:41:39.354434][info][204623][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:41:39.354474][info][204623][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:41:39.373235][info][204623][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:41:39.373271][info][204623][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:41:40.341482][warning][204857][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1737ms, last: 15:41:39.204940**]
+[04/29 15:42:22.004712][info][205795][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:42:22.004788][info][205795][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:42:22.004799][info][205795][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:42:22.004821][info][205795][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:42:24.010264][info][205795][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:42:24.010291][info][205795][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:42:24.012210][info][205795][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:42:24.012238][info][205795][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:42:24.012247][info][205795][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:42:24.012254][info][205795][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:42:24.174439][info][205795][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:42:24.174638][info][205795][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x57DE64094730
+[04/29 15:42:24.232170][info][205795][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:42:24.232326][info][205795][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:42:24.232330][info][205795][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:42:24.232336][info][205795][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:42:24.232338][info][205795][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:42:24.235005][info][205795][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:42:24.235014][info][205795][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:42:24.235017][info][205795][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:42:24.460599][info][205795][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:42:24.460643][info][205795][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:42:24.723683][info][205976][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:42:24.863917][info][205975][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:42:24.864152][warning][205795][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:42:25.297501][warning][205983][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:42:25.942294][info][205795][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:42:25.942352][info][205795][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:42:25.942394][info][205795][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:42:25.992629][info][205795][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:42:25.992736][info][205795][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:42:25.992749][info][205795][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:42:26.035939][info][205795][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:42:26.036078][info][205795][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:42:26.036087][info][205795][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:42:26.036285][info][205795][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:42:26.036347][info][205795][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x57DE64094730
+[04/29 15:42:26.036507][info][205795][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:42:26.037620][info][205795][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:42:26.037634][info][205795][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:42:26.037725][info][205795][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:42:26.057022][info][205795][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:42:26.057062][info][205795][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:42:27.018647][warning][206012][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1721ms, last: 15:42:25.897736**]
+[04/29 15:43:10.720545][info][207009][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:43:10.720618][info][207009][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:43:10.720628][info][207009][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:43:10.720638][info][207009][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:43:12.726462][info][207009][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:43:12.726517][info][207009][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:43:12.728740][info][207009][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:43:12.728763][info][207009][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:43:12.728769][info][207009][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:43:12.728775][info][207009][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:43:12.890659][info][207009][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:43:12.890870][info][207009][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x60ADDF46F2D0
+[04/29 15:43:12.943378][info][207009][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:43:12.943553][info][207009][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:43:12.943557][info][207009][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:43:12.943562][info][207009][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:43:12.943564][info][207009][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:43:12.946231][info][207009][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:43:12.946245][info][207009][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:43:12.946248][info][207009][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:43:13.172317][info][207009][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:43:13.172368][info][207009][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:43:13.436209][info][207197][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:43:13.542300][info][207196][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:43:14.042060][warning][207204][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:43:14.620362][info][207009][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:43:14.620414][info][207009][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:43:14.620457][info][207009][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:43:14.675910][info][207009][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:43:14.676088][info][207009][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:43:14.676109][info][207009][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:43:14.719994][info][207009][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:43:14.720125][info][207009][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:43:14.720134][info][207009][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:43:14.720339][info][207009][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:43:14.720409][info][207009][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x60ADDF46F2D0
+[04/29 15:43:14.720609][info][207009][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:43:14.721684][info][207009][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:43:14.721698][info][207009][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:43:14.721815][info][207009][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:43:14.741322][info][207009][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:43:14.741354][info][207009][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:43:15.736654][warning][207229][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**9 logs in 1694ms, last: 15:43:14.576003**]
+[04/29 15:44:27.798972][info][208730][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:44:27.799043][info][208730][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:44:27.799054][info][208730][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:44:27.799062][info][208730][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:44:29.804562][info][208730][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:44:29.804628][info][208730][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:44:29.807264][info][208730][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:44:29.807288][info][208730][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:44:29.807296][info][208730][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:44:29.807302][info][208730][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:44:29.968497][info][208730][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:44:29.968692][info][208730][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5F37BB617010
+[04/29 15:44:30.026638][info][208730][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:44:30.026806][info][208730][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:44:30.026811][info][208730][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:44:30.026818][info][208730][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:44:30.026820][info][208730][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:44:30.029466][info][208730][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:44:30.029474][info][208730][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:44:30.029477][info][208730][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:44:30.255029][info][208730][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:44:30.255069][info][208730][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:44:30.517883][info][208925][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:44:30.658488][info][208920][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:44:30.658840][warning][208730][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:44:31.091327][warning][208942][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:44:31.746499][info][208730][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:44:31.746549][info][208730][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:44:31.746586][info][208730][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:44:31.799777][info][208730][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:44:31.799858][info][208730][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:44:31.799874][info][208730][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:44:31.842692][info][208730][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:44:31.842767][info][208730][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:44:31.842772][info][208730][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:44:31.842995][info][208730][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:44:31.843058][info][208730][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5F37BB617010
+[04/29 15:44:31.843185][info][208730][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:44:31.844280][info][208730][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:44:31.844291][info][208730][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:44:31.844369][info][208730][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:44:31.863098][info][208730][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:44:31.863114][info][208730][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:44:32.814433][warning][208967][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**10 logs in 1723ms, last: 15:44:31.658629**]
+[04/29 15:46:10.648118][info][210972][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:46:10.648186][info][210972][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:46:10.648196][info][210972][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:46:10.648206][info][210972][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:46:12.654484][info][210972][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:46:12.654552][info][210972][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:46:12.657561][info][210972][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:46:12.657599][info][210972][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:46:12.657608][info][210972][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:46:12.657615][info][210972][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:46:12.818043][info][210972][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:46:12.818244][info][210972][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x5E7396EBDBE0
+[04/29 15:46:12.874426][info][210972][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:46:12.874583][info][210972][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:46:12.874587][info][210972][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:46:12.874592][info][210972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:46:12.874594][info][210972][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:46:12.877279][info][210972][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:46:12.877294][info][210972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:46:12.877297][info][210972][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:46:13.100794][info][210972][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:46:13.100817][info][210972][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:46:13.366375][info][211158][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:46:13.505853][info][211153][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:46:13.506109][warning][210972][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:46:13.939114][warning][211173][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:46:14.612162][info][210972][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:46:14.612183][info][210972][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:46:14.612201][info][210972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:46:14.667187][info][210972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:46:14.667228][info][210972][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:46:14.667236][info][210972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:46:14.709413][info][210972][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:46:14.709496][info][210972][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:46:14.709503][info][210972][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:46:14.709709][info][210972][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:46:14.709768][info][210972][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x5E7396EBDBE0
+[04/29 15:46:14.709957][info][210972][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:46:14.711060][info][210972][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:46:14.711102][info][210972][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:46:14.711234][info][210972][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:46:14.730631][info][210972][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:46:14.730661][info][210972][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:46:15.664792][warning][211197][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**11 logs in 1725ms, last: 15:46:14.606283**]
+[04/29 15:47:12.315703][info][212406][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[04/29 15:47:12.315792][info][212406][DeviceManager.cpp:25] Current found device(s): (1)
+[04/29 15:47:12.315819][info][212406][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:47:12.315831][info][212406][DeviceManager.cpp:339] Enable net device enumeration: true
+[04/29 15:47:14.321627][info][212406][DeviceManager.cpp:25] Current device(s) list: (1)
+[04/29 15:47:14.321681][info][212406][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z, Connection: USB3.2
+[04/29 15:47:14.522766][info][212406][DeviceBase.cpp:651] key: HwType,value:L2
+[04/29 15:47:14.522809][info][212406][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[04/29 15:47:14.522820][info][212406][DeviceBase.cpp:651] key: IspFwVer,value:20240711
+[04/29 15:47:14.522826][info][212406][DeviceBase.cpp:651] key: IspNeedVer,value:20240711
+[04/29 15:47:14.683572][info][212406][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP3F5420000Z FW: 1.3.25
+[04/29 15:47:14.683793][info][212406][Pipeline.cpp:42] [CP3F5420000Z] Pipeline created with device: {name: Gemini 335L, sn: CP3F5420000Z}, @0x652E8605F2B0
+[04/29 15:47:14.738807][info][212406][Pipeline.cpp:216] [CP3F5420000Z] Check and set config done!
+[04/29 15:47:14.738959][info][212406][Pipeline.cpp:254] [CP3F5420000Z] Try to start streams!
+[04/29 15:47:14.738963][info][212406][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:47:14.738968][info][212406][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Color
+[04/29 15:47:14.738970][info][212406][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 800, fps: 30}
+[04/29 15:47:14.741641][info][212406][VideoSensor.cpp:58] [CP3F5420000Z] Try to start stream: {type: Depth, format: Y16, width: 1280, height: 800, fps: 30}
+[04/29 15:47:14.741651][info][212406][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STARTING@Depth
+[04/29 15:47:14.741654][info][212406][VideoSensor.cpp:127] [CP3F5420000Z] Start backend stream: {type: Depth, format: Z16, width: 1280, height: 800, fps: 30}
+[04/29 15:47:14.967502][info][212406][Pipeline.cpp:270] [CP3F5420000Z] Start streams done!
+[04/29 15:47:14.967548][info][212406][Pipeline.cpp:238] [CP3F5420000Z] Pipeline start done!
+[04/29 15:47:15.229748][info][212585][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Depth
+[04/29 15:47:15.370750][info][212580][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STREAMING@Color
+[04/29 15:47:15.370932][warning][212406][Pipeline.cpp:305] [CP3F5420000Z] Wait for frame timeout, you can try to increase the wait time! current timeout=199
+[04/29 15:47:15.804187][warning][212588][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset!
+[04/29 15:47:16.475413][info][212406][Pipeline.cpp:336] [CP3F5420000Z] Try to stop pipeline!
+[04/29 15:47:16.475477][info][212406][Pipeline.cpp:312] [CP3F5420000Z] Try to stop streams!
+[04/29 15:47:16.475516][info][212406][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Depth
+[04/29 15:47:16.530144][info][212406][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Depth
+[04/29 15:47:16.530223][info][212406][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Depth
+[04/29 15:47:16.530231][info][212406][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPING@Color
+[04/29 15:47:16.572147][info][212406][SensorBase.cpp:213] [CP3F5420000Z] Stream state changed to STOPPED@Color
+[04/29 15:47:16.572226][info][212406][Pipeline.cpp:326] [CP3F5420000Z] Sensor stream stopped, sensorType=Color
+[04/29 15:47:16.572250][info][212406][Pipeline.cpp:332] [CP3F5420000Z] Stop streams done!
+[04/29 15:47:16.572459][info][212406][Pipeline.cpp:356] [CP3F5420000Z] Stop pipeline done!
+[04/29 15:47:16.572534][info][212406][Pipeline.cpp:53] [CP3F5420000Z] Pipeline destroyed! @0x652E8605F2B0
+[04/29 15:47:16.572786][info][212406][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:47:16.573989][info][212406][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:47:16.574003][info][212406][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:47:16.574109][info][212406][SensorBase.cpp:47] [CP3F5420000Z] SensorBase is destroyed
+[04/29 15:47:16.593266][info][212406][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[04/29 15:47:16.593304][info][212406][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[04/29 15:47:17.330757][warning][212635][Pipeline.cpp:295] [CP3F5420000Z] Output frameset queue is full, drop oldest frameset! [**11 logs in 1526ms, last: 15:47:16.471263**]

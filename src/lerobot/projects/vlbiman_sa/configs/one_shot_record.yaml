@@ -9,6 +9,7 @@ recording:
   camera_timeout_ms: 500
   max_time_skew_ms: 50.0
   max_consecutive_failures: 5
+  wait_for_start_space: true
   overwrite: false
 
 camera:
@@ -28,7 +29,9 @@ camera:
 robot:
   type: cjjarm
   serial_port: null
-  disable_robot_cameras: true
+  disable_robot_cameras: false
+  record_cameras:
+    - wrist
 
 teleop:
   type: zhonglin_teleop

@@ -43,6 +43,20 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--max-frames", type=int, default=None, help="Override recording.max_frames.")
     parser.add_argument("--output-root", type=Path, default=None, help="Override recording.output_root.")
     parser.add_argument("--run-name", type=str, default=None, help="Override recording.run_name.")
+    start_group = parser.add_mutually_exclusive_group()
+    start_group.add_argument(
+        "--wait-for-start-space",
+        dest="wait_for_start_space",
+        action="store_true",
+        default=None,
+        help="Wait for Space after device initialization before recording.",
+    )
+    start_group.add_argument(
+        "--no-wait-for-start-space",
+        dest="wait_for_start_space",
+        action="store_false",
+        help="Start recording immediately after device initialization.",
+    )
     parser.add_argument("--camera-serial-number", type=str, default=None, help="Override camera serial number.")
     parser.add_argument("--robot-serial-port", type=str, default=None, help="Override robot serial port.")
     parser.add_argument("--teleop-port", type=str, default=None, help="Override Zhonglin teleop serial port.")
@@ -78,6 +92,8 @@ def _build_recorder_config(payload: dict[str, Any], args: argparse.Namespace) ->
         recording_payload["output_root"] = args.output_root
     if args.run_name is not None:
         recording_payload["run_name"] = args.run_name
+    if args.wait_for_start_space is not None:
+        recording_payload["wait_for_start_space"] = args.wait_for_start_space
     if "output_root" in recording_payload:
         recording_payload["output_root"] = Path(recording_payload["output_root"])
     return RecorderConfig(**recording_payload)
@@ -156,7 +172,20 @@ def _build_robot(robot_cfg: dict[str, Any]) -> Any:
     config = CjjArmConfig()
     if robot_cfg.get("serial_port"):
         config.serial_port = str(robot_cfg["serial_port"])
-    if bool(robot_cfg.get("disable_robot_cameras", True)):
+    record_cameras = robot_cfg.get("record_cameras")
+    if record_cameras is not None:
+        if isinstance(record_cameras, str):
+            camera_names = [record_cameras]
+        else:
+            camera_names = [str(name) for name in list(record_cameras)]
+        unknown_cameras = sorted(set(camera_names) - set(config.cameras))
+        if unknown_cameras:
+            raise ValueError(
+                f"Unknown robot record_cameras: {unknown_cameras}. "
+                f"Available cameras: {sorted(config.cameras)}."
+            )
+        config.cameras = {name: config.cameras[name] for name in camera_names}
+    elif bool(robot_cfg.get("disable_robot_cameras", True)):
         config.cameras = {}
     return CjjArm(config)
 

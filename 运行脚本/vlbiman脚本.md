@@ -217,10 +217,10 @@ DISPLAY=:1 "$PY" src/lerobot/projects/vlbiman_sa/app/run_vlbiman_original_flow.p
 ```bash
 SCENE_RUN_ID="pure_sim_plate_ball"
 PLATE_X=0.45
-PLATE_Y=0.00
+PLATE_Y=0.3
 PLATE_Z=0.041
 BALL_X=0.45
-BALL_Y=-0.20
+BALL_Y=0.0
 BALL_Z=0.05925
 
 "$PY" src/lerobot/projects/vlbiman_sa/app/run_mujoco_dual_camera_scene.py \
@@ -341,7 +341,40 @@ ls "$SESSION_DIR"/cameras/front_camera/rgb "$SESSION_DIR"/cameras/wrist_camera/r
 cat "$FLOW_DIR/flow_summary.json"
 ```
 
-### 4. 切分
+
+### 4. 播放
+
+```bash
+  PY=${PYTHON_BIN:-$HOME/miniconda3/envs/lerobot/bin/python}
+  SESSION=outputs/vlbiman_sa/original_flow/pure_sim_original_20260427T072327Z/recordings/sim_one_shot
+  SCENE=outputs/vlbiman_sa/mujoco_dual_camera_scene/pure_sim_plate_ball/scene/dual_camera_target_scene.mjcf
+
+  "$PY" src/lerobot/projects/vlbiman_sa/app/play_mujoco_trajectory.py \
+    --demo-session-dir "$SESSION" \
+    --model-path "$SCENE" \
+    --legacy-scene \
+    --target-phrase "yellow ball" \
+    --step-duration-s 0.1 \
+    --physics-replay \
+    --physics-action-source sent \
+    --physics-substeps 20 \
+    --once
+
+```
+
+
+PATH=/home/cjj/miniconda3/envs/lerobot/bin:$PATH python src/lerobot/projects/vlbiman_sa/app/run_inv_rgb_servo_replay_viewer.py \
+    --source-run-dir outputs/vlbiman_sa/original_flow/pure_sim_original_20260427T072327Z \
+    --camera wrist \
+    --servo-start-frame 75 \
+    --target-frame 100 \
+    --target-phrase "yellow ball" \
+    --config src/lerobot/projects/vlbiman_sa/configs/inv_rgb_servo.yaml \
+    --output-dir outputs/vlbiman_sa/inv_rgb_servo/yellow_ball_replay_viewer \
+    --view free
+
+
+### 5. 切分
 
 ```bash
 "$PY" src/lerobot/projects/vlbiman_sa/app/run_vlbiman_original_flow.py \
@@ -391,3 +424,92 @@ DISPLAY=:1 "$PY" src/lerobot/projects/vlbiman_sa/app/run_vlbiman_original_flow.p
   --scene-preset green_plate_yellow_ball \
   --log-level INFO
 ```
+
+
+
+  PYTHONNOUSERSITE=1 /home/cjj/miniconda3/envs/lerobot/bin/python \
+    src/lerobot/projects/vlbiman_sa/app/run_vlbiman_real_servo_flow.py \
+    --session-dir outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01 \
+    --live-result-path outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01/analysis/live_result_from_recorded_frame50.json \
+    --task-config outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01/analysis/task_grasp_redcan_real.yaml\
+    --target-phrase redcan \
+    --servo-segment skill_001 \
+    --servo-target-frame 50 \
+    --target-mask-path outputs/vlbiman_sa/inv_rgb_servo/check_redcan_real_20260428T125653Z_01_sam2_frame50/mask_000050.png \
+    --camera wrist \
+    --max-servo-steps 50 \
+    --stable-servo-frames 2 \
+    --servo-axis-sign-x -1 \
+    --servo-axis-sign-y -1 \
+    --servo-axis-sign-z 1 \
+    --servo-max-step-xy-m 0.02 \
+    --servo-max-step-z-m 0.02 \
+    --save-overlay-every 1 \
+    --step-duration-s 0.10
+/
+
+  PYTHONNOUSERSITE=1 /home/cjj/miniconda3/envs/lerobot/bin/python \
+      src/lerobot/projects/vlbiman_sa/app/run_vlbiman_real_servo_flow.py \
+      --session-dir outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01 \
+      --capture-live-result \
+      --task-config outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01/analysis/task_grasp_redcan_real.yaml \
+      --target-phrase redcan \
+      --servo-segment skill_001 \
+      --servo-target-frame 50 \
+      --target-mask-path outputs/vlbiman_sa/inv_rgb_servo/check_redcan_real_20260428T125653Z_01_sam2_frame50/mask_000050.png \
+      --camera wrist \
+      --max-servo-steps 50 \
+      --stable-servo-frames 2 \
+      --servo-axis-sign-x -1 \
+      --servo-axis-sign-y -1 \
+      --servo-axis-sign-z 1 \
+      --servo-max-step-xy-m 0.02 \
+      --servo-max-step-z-m 0.02 \
+      --servo-interpolation-hz 30 \
+      --save-overlay-every 5 \
+      --step-duration-s 0.10 \
+      --force-t6
+
+
+
+
+  PYTHONNOUSERSITE=1 /home/cjj/miniconda3/envs/lerobot/bin/python \
+      src/lerobot/projects/vlbiman_sa/app/run_vlbiman_real_servo_flow.py \
+      --session-dir outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01 \
+      --capture-live-result \
+      --task-config outputs/vlbiman_sa/recordings/one_shot_real_20260428T125653Z_01/analysis/task_grasp_redcan_real.yaml \
+      --target-phrase redcan \
+      --servo-segment skill_001 \
+      --servo-target-frame 50 \
+      --target-mask-path outputs/vlbiman_sa/inv_rgb_servo/check_redcan_real_20260428T125653Z_01_sam2_frame50/mask_000050.png \
+      --camera wrist \
+      --max-servo-steps 70 \
+      --stable-servo-frames 2 \
+      --servo-axis-sign-x -1 \
+      --servo-axis-sign-y -1 \
+      --servo-axis-sign-z 1 \
+      --servo-max-step-xy-m 0.02 \
+      --servo-max-step-z-m 0.02 \
+      --servo-step-duration-s 0.10 \
+      --servo-interpolation-hz 20 \
+      --servo-interpolation-profile linear \
+      --servo-arm-velocity 2.0 \
+      --servo-arm-smooth-factor 0.5 \
+      --servo-command-filter-alpha 0.5 \
+      --servo-command-deadband-xy-m 0.00008 \
+      --servo-command-deadband-z-m 0.00015 \
+      --servo-command-max-change-xy-m 0.00035 \
+      --servo-command-max-change-z-m 0.003 \
+      --save-overlay-every 5 \
+      --step-duration-s 0.05 \
+      --force-t6 \
+      --servo-k-u 0.03 \
+      --servo-k-v 0.03 \
+      --servo-k-a 0.02 
+
+
+
+
+
+
+

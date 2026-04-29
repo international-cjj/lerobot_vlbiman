@@ -63,6 +63,8 @@ class SegmentSpec:
     canonical_label: str
     semantic_state: str
     invariance: str
+    target_phrase: str | None = None
+    target_frame_1based: int | None = None
 
 
 def _default_session_dir() -> Path:
@@ -77,29 +79,41 @@ def _parse_args() -> argparse.Namespace:
         "--segment",
         action="append",
         required=True,
-        help="Format: start-end:canonical_label:semantic_state:invariance using 1-based inclusive frames.",
+        help=(
+            "Format: start-end:canonical_label:semantic_state:invariance[:target_phrase[:target_frame]] "
+            "using 1-based inclusive frames. target_frame is also 1-based when provided."
+        ),
     )
     return parser.parse_args()
 
 
 def _parse_segment(text: str) -> SegmentSpec:
     try:
-        frame_range, canonical_label, semantic_state, invariance = text.split(":", 3)
+        parts = text.split(":")
+        if len(parts) not in {4, 5, 6}:
+            raise ValueError("expected 4 to 6 colon-separated fields")
+        frame_range, canonical_label, semantic_state, invariance = parts[:4]
         start_text, end_text = frame_range.split("-", 1)
         start_frame_1based = int(start_text)
         end_frame_1based = int(end_text)
+        target_phrase = parts[4].strip() if len(parts) >= 5 and parts[4].strip() else None
+        target_frame_1based = int(parts[5]) if len(parts) >= 6 and parts[5].strip() else None
     except Exception as exc:
         raise ValueError(f"Invalid --segment spec: {text}") from exc
     if start_frame_1based <= 0 or end_frame_1based < start_frame_1based:
         raise ValueError(f"Invalid frame range in --segment spec: {text}")
     if invariance not in {"var", "inv"}:
         raise ValueError(f"Invariance must be var or inv in --segment spec: {text}")
+    if target_frame_1based is not None and target_frame_1based <= 0:
+        raise ValueError(f"target_frame must be positive in --segment spec: {text}")
     return SegmentSpec(
         start_frame_1based=start_frame_1based,
         end_frame_1based=end_frame_1based,
         canonical_label=canonical_label,
         semantic_state=semantic_state,
         invariance=invariance,
+        target_phrase=target_phrase,
+        target_frame_1based=target_frame_1based,
     )
 
 
@@ -129,6 +143,10 @@ def _build_bank(session_dir: Path, output_dir: Path, specs: list[SegmentSpec]) -
         segment.confidence = 1.0
         segment.metrics["semantic_state"] = spec.semantic_state
         segment.metrics["manual_override"] = 1.0
+        if spec.target_phrase is not None:
+            segment.metrics["target_phrase"] = spec.target_phrase
+        if spec.target_frame_1based is not None:
+            segment.metrics["target_frame"] = spec.target_frame_1based - 1
         segments.append(segment)
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -178,6 +196,8 @@ def _build_bank(session_dir: Path, output_dir: Path, specs: list[SegmentSpec]) -
                 "segment_id": segment.segment_id,
                 "canonical_label": segment.label,
                 "semantic_state": segment.metrics.get("semantic_state"),
+                "target_phrase": segment.metrics.get("target_phrase"),
+                "target_frame": segment.metrics.get("target_frame"),
                 "invariance": segment.invariance,
                 "start_frame": segment.start_frame,
                 "end_frame": segment.end_frame,

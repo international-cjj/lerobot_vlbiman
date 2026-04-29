@@ -46,23 +46,29 @@ def save_named_camera_assets(
     *,
     camera_name: str,
     color_rgb: np.ndarray,
-    depth_map: np.ndarray,
+    depth_map: np.ndarray | None = None,
 ) -> FrameRecord:
     safe_camera_name = _safe_asset_name(camera_name)
     rgb_rel = Path("cameras") / safe_camera_name / "rgb" / f"frame_{frame.frame_index:06d}.png"
-    depth_rel = Path("cameras") / safe_camera_name / "depth" / f"frame_{frame.frame_index:06d}.npy"
-    _write_rgb_depth(
-        rgb_path=session_dir / rgb_rel,
-        depth_path=session_dir / depth_rel,
-        color_rgb=color_rgb,
-        depth_map=depth_map,
-    )
+    rgb_path = session_dir / rgb_rel
+    if depth_map is None:
+        _write_rgb(rgb_path=rgb_path, color_rgb=color_rgb)
+        depth_rel = None
+    else:
+        depth_rel = Path("cameras") / safe_camera_name / "depth" / f"frame_{frame.frame_index:06d}.npy"
+        _write_rgb_depth(
+            rgb_path=rgb_path,
+            depth_path=session_dir / depth_rel,
+            color_rgb=color_rgb,
+            depth_map=depth_map,
+        )
     frame.camera_assets[safe_camera_name] = {
         "color_path": rgb_rel.as_posix(),
-        "depth_path": depth_rel.as_posix(),
         "color_shape": list(np.asarray(color_rgb).shape),
-        "depth_shape": list(np.asarray(depth_map).shape),
     }
+    if depth_rel is not None:
+        frame.camera_assets[safe_camera_name]["depth_path"] = depth_rel.as_posix()
+        frame.camera_assets[safe_camera_name]["depth_shape"] = list(np.asarray(depth_map).shape)
     return frame
 
 
@@ -75,6 +81,15 @@ def _write_rgb_depth(*, rgb_path: Path, depth_path: Path, color_rgb: np.ndarray,
         raise RuntimeError(f"Failed to encode RGB frame to PNG: {rgb_path}")
     rgb_path.write_bytes(encoded.tobytes())
     np.save(depth_path, np.asarray(depth_map))
+
+
+def _write_rgb(*, rgb_path: Path, color_rgb: np.ndarray) -> None:
+    rgb_path.parent.mkdir(parents=True, exist_ok=True)
+    rgb_bgr = cv2.cvtColor(np.asarray(color_rgb), cv2.COLOR_RGB2BGR)
+    ok, encoded = cv2.imencode(".png", rgb_bgr)
+    if not ok:
+        raise RuntimeError(f"Failed to encode RGB frame to PNG: {rgb_path}")
+    rgb_path.write_bytes(encoded.tobytes())
 
 
 def _safe_asset_name(value: str) -> str:

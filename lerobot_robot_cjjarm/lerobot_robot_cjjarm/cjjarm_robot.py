@@ -231,10 +231,33 @@ class CjjArm(Robot):
             dtype=float,
         )
 
+    def _extract_delta_frame(self, action: dict[str, Any]) -> str:
+        frame = str(
+            action.get(
+                "delta_frame",
+                action.get("pose_delta_frame", action.get("reference_frame", "world")),
+            )
+        ).strip().lower()
+        if frame in {"world", "base", "base_link"}:
+            return "world"
+        if frame in {"tool", "tool0", "ee", "end_effector", "end-effector"}:
+            return "tool"
+        raise ValueError(f"Unsupported delta_frame '{frame}'. Expected 'world' or 'tool'.")
+
     def _send_joint_action(self, action: dict[str, Any]) -> dict[str, Any]:
         if not self.is_connected:
             raise DeviceNotConnectedError(f"{self} is not connected.")
 
+        arm_velocity = float(
+            action.get(
+                "arm_velocity",
+                action.get("joint_velocity", action.get("velocity", self.config.default_arm_velocity)),
+            )
+        )
+        smooth_override = action.get("arm_smooth_factor", action.get("smooth_factor"))
+        if smooth_override is not None:
+            smooth_override = max(0.0, min(1.0, float(smooth_override)))
+        sent_joint_positions: dict[str, float] = {}
         for joint_name, motor in self.motors.items():
             target_key = f"{joint_name}.pos"
             if target_key not in action:
@@ -265,21 +288,28 @@ class CjjArm(Robot):
             
             # === 手臂关节控制 (保持平滑逻辑) ===
             else:
-                smooth_factor = self.config.per_joint_smooth_factor.get(
-                    joint_name, self.config.default_smooth_factor
+                smooth_factor = (
+                    float(smooth_override)
+                    if smooth_override is not None
+                    else self.config.per_joint_smooth_factor.get(joint_name, self.config.default_smooth_factor)
                 )
+                smooth_factor = max(0.0, min(1.0, float(smooth_factor)))
                 prev_target = self._prev_targets.get(joint_name, motor.getPosition() * sign)
                 
                 final_target = (1 - smooth_factor) * prev_target + smooth_factor * raw_input
                 self._prev_targets[joint_name] = final_target
+                sent_joint_positions[joint_name] = float(final_target)
                 
                 self.motor_control.control_Pos_Vel(
                     motor, 
                     final_target * sign, 
-                    5.0 
+                    arm_velocity 
                 )
 
-        return action
+        result = dict(action)
+        if sent_joint_positions:
+            result["_sent_joint_positions"] = sent_joint_positions
+        return result
 
     def send_action(self, action: dict[str, Any]) -> dict[str, Any]:
         if not self.is_connected:
@@ -321,7 +351,13 @@ class CjjArm(Robot):
                         dtype=float,
                     )
                 current_pose = self.kinematics.compute_fk(seed)
-                pose_action = compose_pose_delta(current_pose, delta_action, rotation_frame="world")
+                delta_frame = self._extract_delta_frame(action)
+                pose_action = compose_pose_delta(
+                    current_pose,
+                    delta_action,
+                    rotation_frame=delta_frame,
+                    translation_frame=delta_frame,
+                )
 
         if pose_action is not None:
             if self.kinematics is None:
@@ -340,8 +376,22 @@ class CjjArm(Robot):
             }
             if "gripper.pos" in action:
                 joint_action["gripper.pos"] = action["gripper.pos"]
-            self._last_joint_positions = ik_solution
-            return self._send_joint_action(joint_action)
+            for velocity_key in ("arm_velocity", "joint_velocity", "velocity"):
+                if velocity_key in action:
+                    joint_action[velocity_key] = action[velocity_key]
+            for smooth_key in ("arm_smooth_factor", "smooth_factor"):
+                if smooth_key in action:
+                    joint_action[smooth_key] = action[smooth_key]
+            result = self._send_joint_action(joint_action)
+            sent_positions = result.get("_sent_joint_positions") if isinstance(result, dict) else None
+            if isinstance(sent_positions, dict) and all(name in sent_positions for name in self._arm_joint_names):
+                self._last_joint_positions = np.asarray(
+                    [float(sent_positions[name]) for name in self._arm_joint_names],
+                    dtype=float,
+                )
+            else:
+                self._last_joint_positions = ik_solution
+            return result
 
         return self._send_joint_action(action)
 

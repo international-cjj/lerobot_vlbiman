@@ -30,7 +30,7 @@ class SkillSegment:
     gripper_start: float = 0.0
     gripper_end: float = 0.0
     joint_keys: list[str] = field(default_factory=list)
-    metrics: dict[str, float] = field(default_factory=dict)
+    metrics: dict[str, Any] = field(default_factory=dict)
     boundary_reasons: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:

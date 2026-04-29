@@ -68,6 +68,8 @@ class TrajectoryPipelineConfig:
     adapted_pose_path: Path
     current_joint_positions: list[float] | None = None
     current_joint_positions_source: str | None = None
+    start_segment_id: str | None = None
+    start_after_segment_id: str | None = None
 
 
 def _default_session_dir() -> Path:
@@ -92,6 +94,18 @@ def _parse_args() -> argparse.Namespace:
         type=Path,
         default=None,
         help="JSON path for continuity-aware start joints (list[6] or {'joint_positions': list[6]}).",
+    )
+    parser.add_argument(
+        "--start-segment-id",
+        type=str,
+        default=None,
+        help="Only generate a suffix beginning with this segment id.",
+    )
+    parser.add_argument(
+        "--start-after-segment-id",
+        type=str,
+        default=None,
+        help="Only generate a suffix beginning after this segment id.",
     )
     parser.add_argument("--log-level", default="INFO")
     return parser.parse_args()
@@ -118,6 +132,8 @@ def _build_config(args: argparse.Namespace) -> TrajectoryPipelineConfig:
         adapted_pose_path=args.adapted_pose_path or (analysis_dir / "t5_pose" / "adapted_pose.json"),
         current_joint_positions=current_joint_positions,
         current_joint_positions_source=current_joint_positions_source,
+        start_segment_id=args.start_segment_id,
+        start_after_segment_id=args.start_after_segment_id,
     )
 
 
@@ -159,9 +175,68 @@ def _demo_pose_matrices(records: list[Any], ik_state: Any, joint_keys: list[str]
     return matrices
 
 
+def _filter_skill_bank_segments(
+    skill_bank: SkillBank,
+    *,
+    start_segment_id: str | None,
+    start_after_segment_id: str | None,
+) -> tuple[SkillBank, dict[str, Any]]:
+    if start_segment_id and start_after_segment_id:
+        raise ValueError("Specify either start_segment_id or start_after_segment_id, not both.")
+
+    segments = list(skill_bank.segments)
+    segment_ids = [str(segment.segment_id) for segment in segments]
+    filter_summary: dict[str, Any] = {
+        "mode": "all",
+        "start_segment_id": start_segment_id,
+        "start_after_segment_id": start_after_segment_id,
+        "original_segment_count": len(segments),
+        "selected_segment_count": len(segments),
+        "first_selected_segment_id": segment_ids[0] if segment_ids else None,
+    }
+    if not start_segment_id and not start_after_segment_id:
+        return skill_bank, filter_summary
+
+    requested_id = start_segment_id or start_after_segment_id
+    assert requested_id is not None
+    if requested_id not in segment_ids:
+        raise ValueError(f"Segment id {requested_id!r} not found in skill bank. Available: {segment_ids}")
+
+    requested_index = segment_ids.index(requested_id)
+    start_index = requested_index + (1 if start_after_segment_id else 0)
+    selected = segments[start_index:]
+    filter_summary.update(
+        {
+            "mode": "suffix_after" if start_after_segment_id else "suffix_from",
+            "requested_segment_id": requested_id,
+            "requested_segment_index": requested_index,
+            "selected_start_index": start_index,
+            "selected_segment_count": len(selected),
+            "first_selected_segment_id": str(selected[0].segment_id) if selected else None,
+        }
+    )
+
+    return (
+        SkillBank(
+            session_dir=skill_bank.session_dir,
+            output_dir=skill_bank.output_dir,
+            frame_count=skill_bank.frame_count,
+            joint_keys=list(skill_bank.joint_keys),
+            segments=selected,
+            summary={**skill_bank.summary, "segment_filter": filter_summary},
+        ),
+        filter_summary,
+    )
+
+
 def run_trajectory_generation_pipeline(config: TrajectoryPipelineConfig) -> dict[str, Any]:
     records = load_frame_records(config.session_dir)
     skill_bank = SkillBank.load(config.skill_bank_path)
+    skill_bank, segment_filter_summary = _filter_skill_bank_segments(
+        skill_bank,
+        start_segment_id=config.start_segment_id,
+        start_after_segment_id=config.start_after_segment_id,
+    )
     adapted_pose = _load_json(config.adapted_pose_path)
     ik_state = build_ikpy_state()
     composer = TrajectoryComposer(ik_state, config=TrajectoryComposerConfig())
@@ -173,6 +248,7 @@ def run_trajectory_generation_pipeline(config: TrajectoryPipelineConfig) -> dict
         demo_pose_matrices=demo_pose_matrices,
         start_joint_positions=config.current_joint_positions,
     )
+    trajectory.summary["segment_filter"] = segment_filter_summary
 
     config.output_dir.mkdir(parents=True, exist_ok=True)
     points_path = config.output_dir / "trajectory_points.json"
@@ -203,6 +279,10 @@ def run_trajectory_generation_pipeline(config: TrajectoryPipelineConfig) -> dict
     if config.current_joint_positions is not None:
         summary["continuity_input_joint_positions"] = [float(value) for value in config.current_joint_positions]
         summary["continuity_input_source"] = config.current_joint_positions_source
+    if config.start_segment_id is not None:
+        summary["start_segment_id"] = config.start_segment_id
+    if config.start_after_segment_id is not None:
+        summary["start_after_segment_id"] = config.start_after_segment_id
     _save_json(summary_path, summary)
     return summary
 

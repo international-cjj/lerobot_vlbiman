@@ -22,16 +22,19 @@ def compose_pose_delta(
     delta_pose: np.ndarray | list[float],
     *,
     rotation_frame: str = "world",
+    translation_frame: str = "world",
 ) -> np.ndarray:
     """Apply a Cartesian pose delta to a pose represented as [x, y, z, rx, ry, rz].
 
-    The translational part is applied additively. The rotational part is interpreted as a
-    small rotation-vector increment and composed on SO(3), instead of being added component-wise.
+    The translational part can be interpreted in either the fixed/world frame or the
+    current tool frame. The rotational part is interpreted as a small rotation-vector
+    increment and composed on SO(3), instead of being added component-wise.
 
     Args:
         base_pose: The starting pose as [x, y, z, rx, ry, rz], where rotation is a rotvec.
         delta_pose: The pose delta as [dx, dy, dz, drx, dry, drz].
         rotation_frame: ``"world"`` for fixed/world-frame increments, or ``"tool"`` for body-frame increments.
+        translation_frame: ``"world"`` for fixed/world-frame translation, or ``"tool"`` for end-effector-frame translation.
 
     Returns:
         The composed pose in the same representation as ``base_pose``.
@@ -42,12 +45,18 @@ def compose_pose_delta(
         raise ValueError("base_pose and delta_pose must both be 1D arrays with 6 elements.")
 
     composed = base.copy()
-    composed[:3] += delta[:3]
+    base_rot = Rotation.from_rotvec(base[3:])
+
+    if translation_frame == "world":
+        composed[:3] += delta[:3]
+    elif translation_frame == "tool":
+        composed[:3] += base_rot.as_matrix() @ delta[:3]
+    else:
+        raise ValueError(f"Unsupported translation_frame '{translation_frame}'. Expected 'world' or 'tool'.")
 
     if np.linalg.norm(delta[3:]) < 1e-12:
         return composed
 
-    base_rot = Rotation.from_rotvec(base[3:])
     delta_rot = Rotation.from_rotvec(delta[3:])
 
     if rotation_frame == "world":
